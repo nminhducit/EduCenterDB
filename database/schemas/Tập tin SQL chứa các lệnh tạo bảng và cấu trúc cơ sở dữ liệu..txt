@@ -1,0 +1,1 @@
+Tập tin SQL chứa các lệnh tạo bảng và cấu trúc cơ sở dữ liệu.
