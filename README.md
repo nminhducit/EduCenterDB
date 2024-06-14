@@ -24,24 +24,20 @@ EduCenterDB is a project aimed at designing a database management system for an 
 ## Project Structure
 
 /EduCenterDB
-|-- /Documentation
-|-- /Database
-|-- /Development
-|-- /Testing
-|-- /Deployment
-|-- /Presentations
-|-- /Miscellaneous
+|-- /documentation
+|-- /database
+|-- /development
+|-- /testing
+|-- /presentations
 
 
 ### Main Folders
 
-- **/Documentation**: Includes project-related documents such as requirements, design, and user guides.
-- **/Database**: Contains files related to the database like table schemas and sample data.
-- **/Development**: Source code and files related to system development.
-- **/Testing**: Test cases and testing data.
-- **/Deployment**: Configuration files and deployment scripts.
-- **/Presentations**: Documents and slides for presentations.
-- **/Miscellaneous**: References and miscellaneous templates.
+- **/documentation**: Includes project-related documents such as requirements, design, and user guides.
+- **/database**: Contains files related to the database like table schemas and sample data.
+- **/development**: Source code and files related to system development.
+- **/testing**: Test cases and testing data.
+- **/presentations**: Documents and slides for presentations.
 
 ## Installation
 
