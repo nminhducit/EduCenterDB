@@ -2,7 +2,7 @@
 
 ## Introduction
 
-EduCenterDB is a comprehensive database management system designed for English learning centers. This project aims to streamline the administration of courses, students, instructors, and classes. The system addresses the need for efficient data management and reporting in educational institutions that focus on language training.
+EduCenterDB is a comprehensive database management system designed for English learning centers. This project aims to streamline the administration of courses, students, instructors, and classes. The system addresses the need for efficient data management and reporting in educational institutions that focus on language training. 
 
 ### Purpose
 
