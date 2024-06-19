@@ -1,95 +1,155 @@
-USE EduCenterDB_TEST;
+CREATE DATABASE EduCenterDB_TEST;
 
-CREATE TABLE course(
-    course_id	INT PRIMARY KEY,
-    lessons		INT,
-    description	VARCHAR(300),
-    term		VARCHAR(100),
-    level_id	VARCHAR(1)
+USE EduCenterDB_TEST
+
+CREATE TABLE student (
+    id INT PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    date_birth DATE NOT NULL,
+    email VARCHAR(100),
+    phone VARCHAR(15),
+    street VARCHAR(100),
+    city VARCHAR(50),
+    state VARCHAR(50),
+    zip VARCHAR(10)
 );
 
-CREATE TABLE course_material(
-    material_id	INT PRIMARY KEY,
-    material_title	VARCHAR(50),
-    material_description	VARCHAR(500),
-    material_type	VARCHAR(50),
-    material_url	VARCHAR(100),
-    date_add		DATE
-);
-
-CREATE TABLE student(
+CREATE TABLE student_account (
     student_id INT PRIMARY KEY,
-    first_name	VARCHAR(50),
-    last_name	VARCHAR(50),
-    date_birth_s	DATE,
-    email_s		VARCHAR(50),
-    phone_s		VARCHAR(15),
-    address_s	VARCHAR(50),
-    registration_date	DATE,
-    status		VARCHAR(20)
+    login VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    balance DECIMAL(10,2) DEFAULT 0.00,
+    FOREIGN KEY (student_id) REFERENCES student(id)
 );
 
-CREATE TABLE student_account(
-    account_id	INT PRIMARY KEY,
-    student_id	INT,
-    username	VARCHAR(50),
-    password	VARCHAR(50),
-    created_date	DATE,
-    last_login	TIME,
-    FOREIGN KEY (student_id) REFERENCES student(student_id)
+
+CREATE TABLE teacher (
+    id INT PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100),
+    phone VARCHAR(15)
 );
 
-CREATE TABLE payment(
-    payment_id	INT PRIMARY KEY,
-    student_id	INT,
-    payment_date	DATE,
-    amount		MONEY,
-    FOREIGN KEY (student_id) REFERENCES student(student_id)
+
+CREATE TABLE teacher_account (
+    teacher_id INT PRIMARY KEY,
+    login VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    is_active  bit,
+    FOREIGN KEY (teacher_id) REFERENCES teacher(id)
 );
 
-CREATE TABLE teacher(
-    teacher_id  INT PRIMARY KEY,
-    first_name  VARCHAR(50),
-    last_name   VARCHAR(50),
-    email_t     VARCHAR(50),
-    date_birth_t    DATE,
-    phone_t     VARCHAR(15),
-    address_t   VARCHAR(50)
+
+CREATE TABLE language (
+    id INT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL
 );
 
-CREATE TABLE teacher_account(
-    account_id	INT PRIMARY KEY,
-    username    VARCHAR(50),
-    password    VARCHAR(50),
-    created_date    DATE,
-    last_login      VARCHAR(100)
+
+CREATE TABLE level (
+    id INT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL
 );
 
-CREATE TABLE class(
-    class_id    INT PRIMARY KEY,
-    name        VARCHAR(50),
-    start_date  DATE,
-    end_date    DATE,
-    teacher_id  INT,
-    course_id   INT,
-    FOREIGN KEY (teacher_id) REFERENCES teacher(teacher_id),
-    FOREIGN KEY (course_id) REFERENCES course(course_id)
+
+CREATE TABLE category (
+    id INT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL
 );
 
-CREATE TABLE exam(
-    exam_id		INT PRIMARY KEY,
-    account_id  INT,
-    exam_name   VARCHAR(50),
-    exam_date   DATE,
-    score       INT,
-    FOREIGN KEY (account_id) REFERENCES student_account(account_id)
+
+CREATE TABLE course (
+    id INT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    description TEXT,
+    language_id INT,
+    level_id INT,
+    category_id INT,
+    FOREIGN KEY (language_id) REFERENCES language(id),
+    FOREIGN KEY (level_id) REFERENCES level(id),
+    FOREIGN KEY (category_id) REFERENCES category(id)
 );
 
-CREATE TABLE grade(
-    grade_id    INT PRIMARY KEY,
-    exam_id		INT,
-    student_id  INT,
-    student_name	VARCHAR(50),
-    FOREIGN KEY (exam_id) REFERENCES exam(exam_id),
-    FOREIGN KEY (student_id) REFERENCES student(student_id)
+
+CREATE TABLE class (
+    id INT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    start_date DATE NOT NULL,
+    end_date DATE NOT NULL,
+    teacher_id INT,
+    course_id INT,
+    FOREIGN KEY (teacher_id) REFERENCES teacher(id),
+    FOREIGN KEY (course_id) REFERENCES course(id)
+);
+
+
+CREATE TABLE class_student (
+    id INT PRIMARY KEY,
+    class_id INT,
+    student_id INT,
+    FOREIGN KEY (class_id) REFERENCES class(id),
+    FOREIGN KEY (student_id) REFERENCES student(id)
+);
+
+
+CREATE TABLE payment_method (
+    id INT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL
+);
+
+
+CREATE TABLE payment (
+    id INT PRIMARY KEY,
+    payment_date DATETIME NOT NULL,
+    amount DECIMAL(10,2) NOT NULL,
+    payment_method_id INT,
+    status VARCHAR(50) NOT NULL,
+    student_id INT,
+    FOREIGN KEY (payment_method_id) REFERENCES payment_method(id),
+    FOREIGN KEY (student_id) REFERENCES student(id)
+);
+
+
+CREATE TABLE exam (
+    id INT PRIMARY KEY,
+    class_id INT,
+    date DATE NOT NULL,
+    description TEXT,
+    FOREIGN KEY (class_id) REFERENCES class(id)
+);
+
+
+CREATE TABLE grade (
+    id INT PRIMARY KEY,
+    student_id INT,
+    exam_id INT,
+    value INT NOT NULL,
+    FOREIGN KEY (student_id) REFERENCES student(id),
+    FOREIGN KEY (exam_id) REFERENCES exam(id)
+);
+
+
+CREATE TABLE weekday (
+    id INT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL
+);
+
+
+CREATE TABLE class_weekday (
+    id INT PRIMARY KEY,
+    class_id INT,
+    weekday_id INT,
+    hours VARCHAR(20),
+    FOREIGN KEY (class_id) REFERENCES class(id),
+    FOREIGN KEY (weekday_id) REFERENCES weekday(id)
+);
+
+
+CREATE TABLE course_material (
+    id INT PRIMARY KEY,
+    course_id INT,
+    description TEXT,
+    FOREIGN KEY (course_id) REFERENCES course(id)
 );
