@@ -4,19 +4,19 @@ USE EduCenterDB_TEST
 
 CREATE TABLE student (
     id INT PRIMARY KEY,
-    first_name VARCHAR(50) NOT NULL,
-    last_name VARCHAR(50) NOT NULL,
+    first_name NVARCHAR(50) NOT NULL,
+    last_name NVARCHAR(50) NOT NULL,
     date_birth DATE NOT NULL,
-    email VARCHAR(100),
+    email NVARCHAR(100),
     phone VARCHAR(15),
-    street VARCHAR(100),
-    city VARCHAR(50),
-    state VARCHAR(50),
+    street NVARCHAR(100),
+    city NVARCHAR(50),
+    state NVARCHAR(50),
     zip VARCHAR(10)
 );
 
 CREATE TABLE student_account (
-    student_id INT PRIMARY KEY,
+    student_id INT PRIMARY KEY
     login VARCHAR(50) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
     balance DECIMAL(10,2) DEFAULT 0.00,
@@ -26,10 +26,15 @@ CREATE TABLE student_account (
 
 CREATE TABLE teacher (
     id INT PRIMARY KEY,
-    first_name VARCHAR(50) NOT NULL,
-    last_name VARCHAR(50) NOT NULL,
-    email VARCHAR(100),
-    phone VARCHAR(15)
+    first_name NVARCHAR(50) NOT NULL,
+    last_name NVARCHAR(50) NOT NULL,
+    date_birth DATE NOT NULL,
+    email NVARCHAR(100),
+    phone VARCHAR(15),
+    street NVARCHAR(100),
+    city NVARCHAR(50),
+    state NVARCHAR(50),
+    zip VARCHAR(10)
 );
 
 
