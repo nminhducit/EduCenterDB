@@ -80,7 +80,7 @@ CREATE TABLE course (
 
 CREATE TABLE class (
     id INT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
+    name NVARCHAR(100) NOT NULL,
     start_date DATE NOT NULL,
     end_date DATE NOT NULL,
     teacher_id INT,
