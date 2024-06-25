@@ -25,6 +25,7 @@ CREATE TABLE student (
     first_name NVARCHAR(50),
     last_name NVARCHAR(50),
     date_birth DATE,
+    gender NVARCHAR(20),
     email VARCHAR(50),
     phone VARCHAR(15),
     street NVARCHAR(100),
