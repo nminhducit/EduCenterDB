@@ -20,6 +20,8 @@ CREATE TABLE level (
     name VARCHAR(50)
 );
 
+
+
 CREATE TABLE student (
     id INT PRIMARY KEY,
     first_name NVARCHAR(50),
@@ -129,12 +131,6 @@ CREATE TABLE grade (
     exam_id INT,
     FOREIGN KEY (student_id) REFERENCES student(id),
     FOREIGN KEY (exam_id) REFERENCES student(id)
-);
-
-
-CREATE TABLE weekday (
-    id INT PRIMARY KEY,
-    name VARCHAR(50)
 );
 
 

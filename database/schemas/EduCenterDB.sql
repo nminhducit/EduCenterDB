@@ -48,6 +48,14 @@ CREATE TABLE teacher (
     zip VARCHAR(50)
 );
 
+CREATE TABLE teacher_account (
+    teacher_id INT PRIMARY KEY,
+    username VARCHAR(50),
+    password VARCHAR(50),
+    is_active BIT,
+    FOREIGN KEY (teacher_id) REFERENCES teacher(id)
+);
+
 CREATE TABLE course (
     id INT PRIMARY KEY,
     name VARCHAR(100),
@@ -77,14 +85,6 @@ CREATE TABLE class_student (
     student_id INT,
     FOREIGN KEY (class_id) REFERENCES class(id),
     FOREIGN KEY (student_id) REFERENCES student(id)
-);
-
-CREATE TABLE teacher_account (
-    teacher_id INT PRIMARY KEY,
-    username VARCHAR(50),
-    password VARCHAR(50),
-    is_active BIT,
-    FOREIGN KEY (teacher_id) REFERENCES teacher(id)
 );
 
 CREATE TABLE course_material (
