@@ -125,19 +125,12 @@ INSERT INTO grade (id, student_id, exam_id, grade) VALUES
 -- Thêm các điểm khác từ 11 đến 80
 (80, 80, 20, 70);
 
--- Mẫu dữ liệu cho bảng payment_method
-INSERT INTO payment_method (id, name) VALUES
-(1, 'Credit Card'),
-(2, 'Bank Transfer'),
-(3, 'Cash'),
-(4, 'PayPal');
-
 -- Mẫu dữ liệu cho bảng payment
-INSERT INTO payment (id, payment_date, amount, payment_method_id, status, student_id, class_id) VALUES
-(1, '2024-01-15', 500000, 1, 'Completed', 1, 1),
-(2, '2024-02-20', 600000, 2, 'Completed', 2, 2),
-(3, '2024-03-25', 700000, 3, 'Pending', 3, 3),
-(4, '2024-04-30', 800000, 4, 'Completed', 4, 4),
-(5, '2024-05-05', 900000, 1, 'Completed', 5, 5),
+INSERT INTO payment (id, payment_date, amount, status, student_id, class_id) VALUES
+(1, '2024-01-15', 500000, 'Completed', 1, 1),
+(2, '2024-02-20', 600000, 'Completed', 2, 2),
+(3, '2024-03-25', 700000, 'Pending', 3, 3),
+(4, '2024-04-30', 800000, 'Completed', 4, 4),
+(5, '2024-05-05', 900000, 'Completed', 5, 5),
 -- Thêm các thanh toán khác từ 6 đến 80
 (80, '2024-08-20', 600000, 2, 'Pending', 80, 10);
