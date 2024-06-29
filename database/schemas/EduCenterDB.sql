@@ -1,7 +1,7 @@
-CREATE DATABASE EduCenterDB_TEST
+CREATE DATABASE EduCenterDB
 GO
 
-USE EduCenterDB_TEST
+USE EduCenterDB
 GO
 
 CREATE TABLE language (
