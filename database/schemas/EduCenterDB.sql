@@ -4,21 +4,15 @@ GO
 USE EduCenterDB
 GO
 
-CREATE TABLE language (
-    id INT PRIMARY KEY,
-    name NVARCHAR(50)
-);
-
 CREATE TABLE category (
-    id INT PRIMARY KEY,
-    name NVARCHAR(50)
+    id NVARCHAR(50) PRIMARY KEY,
 );
-
 
 CREATE TABLE level (
     id INT PRIMARY KEY,
     name VARCHAR(50)
 );
+
 
 CREATE TABLE student (
     id INT PRIMARY KEY,
@@ -31,6 +25,15 @@ CREATE TABLE student (
     city NVARCHAR(50),
     state NVARCHAR(50),
     zip VARCHAR(10)
+);
+
+CREATE TABLE payment (
+    id INT PRIMARY KEY,
+    payment_date DATE,
+    amount MONEY,
+    status VARCHAR(50),
+    student_id INT,
+    FOREIGN KEY (student_id) REFERENCES student(id)
 );
 
 CREATE TABLE teacher (
@@ -57,49 +60,40 @@ CREATE TABLE teacher_account (
 );
 
 CREATE TABLE course (
-    id INT PRIMARY KEY,
-    name VARCHAR(100),
-    description TEXT,
-    language_id INT,
+    id NVARCHAR(50) PRIMARY KEY,
+    description NVARCHAR(300),
     level_id INT,
-    category_id INT,
-    FOREIGN KEY (language_id) REFERENCES language(id),
-    FOREIGN KEY (level_id) REFERENCES level(id),
-    FOREIGN KEY (category_id) REFERENCES category(id)
+    category_id NVARCHAR(50),
+    FOREIGN KEY (category_id) REFERENCES category(id),
+	FOREIGN KEY (level_id)	REFERENCES level(id)
+);
+
+CREATE TABLE course_material (
+    id NVARCHAR(50) PRIMARY KEY,
+    course_id NVARCHAR(50),
+    description TEXT,
+	material_type	NVARCHAR(50),
+	material_url		varchar(100),
+	date_add			date,
+    FOREIGN KEY (course_id) REFERENCES course(id)
 );
 
 CREATE TABLE class (
-    id INT PRIMARY KEY,
-    name NVARCHAR(100),
+    id NVARCHAR(20) PRIMARY KEY,
     start_date DATE,
     end_date DATE,
     teacher_id INT,
-    course_id INT,
+    course_id NVARCHAR(50),
     FOREIGN KEY (teacher_id) REFERENCES teacher(id),
     FOREIGN KEY (course_id) REFERENCES course(id)
 );
 
+
 CREATE TABLE class_student (
-    id INT PRIMARY KEY,
-    class_id INT,
+    PRIMARY KEY (class_id,student_id),
+    class_id NVARCHAR(20),
     student_id INT,
     FOREIGN KEY (class_id) REFERENCES class(id),
-    FOREIGN KEY (student_id) REFERENCES student(id)
-);
-
-CREATE TABLE course_material (
-    id INT PRIMARY KEY,
-    course_id INT,
-    description TEXT,
-    FOREIGN KEY (course_id) REFERENCES course(id)
-);
-
-CREATE TABLE payment (
-    id INT PRIMARY KEY,
-    payment_date DATE,
-    amount MONEY,
-    status VARCHAR(50),
-    student_id INT,
     FOREIGN KEY (student_id) REFERENCES student(id)
 );
 
@@ -116,7 +110,7 @@ CREATE TABLE exam (
     id INT PRIMARY KEY,
     date DATE,
     description TEXT,
-    class_id INT,
+    class_id NVARCHAR(20),
     FOREIGN KEY (class_id) REFERENCES class(id)
 );
 
@@ -127,22 +121,12 @@ CREATE TABLE grade (
     student_id INT,
     exam_id INT,
     FOREIGN KEY (student_id) REFERENCES student(id),
-    FOREIGN KEY (exam_id) REFERENCES student(id)
+    FOREIGN KEY (exam_id) REFERENCES exam(id)
 );
-
-
-CREATE TABLE weekday (
-    id INT PRIMARY KEY,
-    name VARCHAR(50)
-);
-
 
 CREATE TABLE class_weekday (
-    id INT PRIMARY KEY,
-    class_id INT,
+    class_id NVARCHAR(20),
     weekday_id INT,
-    hours VARCHAR(20),
     FOREIGN KEY (class_id) REFERENCES class(id),
-    FOREIGN KEY (weekday_id) REFERENCES weekday(id)
 );
 
