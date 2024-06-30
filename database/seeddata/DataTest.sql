@@ -4,7 +4,7 @@ INSERT INTO student (id, date_birth, state, zip_code, street, city, first_name, 
 (2, '2002-07-19', 'HCM', '700000', 'Đường B', 'TP.HCM', 'Nguyễn', 'Bình', 'nguyenbinh@gmail.com', '0901234562'),
 (3, '2001-08-20', 'ĐN', '550000', 'Đường C', 'Đà Nẵng', 'Trần', 'Vân', 'tranvan@gmail.com', '0901234563'),
 (4, '2000-10-30', 'HN', '100001', 'Đường D', 'Hà Nội', 'Phạm', 'Lan', 'phaml@gmail.com', '0901234564'),
-(5, '2004-01-12', 'HCM', '700001', 'Đường E', 'TP.HCM', 'Bùi', 'Anh', 'buianh@gmail.com', '0901234565'),
+(5, '2004-01-12', 'HCM', '700002', 'Đường E', 'TP.HCM', 'Bùi', 'Anh', 'buianh@gmail.com', '0901234565'),
 (6, '2003-03-05', 'ĐN', '550001', 'Đường F', 'Đà Nẵng', 'Ngô', 'Dũng', 'ngodung@gmail.com', '0901234566'),
 (7, '2002-05-22', 'HN', '100002', 'Đường G', 'Hà Nội', 'Hoàng', 'Hùng', 'hoanghung@gmail.com', '0901234567'),
 (8, '2001-07-19', 'HCM', '700002', 'Đường H', 'TP.HCM', 'Trịnh', 'Vũ', 'trinhvu@gmail.com', '0901234568'),
@@ -112,7 +112,6 @@ INSERT INTO exam (id, class_id, name, date) VALUES
 
 -- Mẫu dữ liệu cho bảng grade
 INSERT INTO grade (id, student_id, exam_id, grade) VALUES
-(1, 1, 1, 85),
 (2, 1, 2, 90),
 (3, 2, 1, 88),
 (4, 2, 2, 92),
