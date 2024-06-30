@@ -126,7 +126,7 @@ CREATE TABLE grade (
 
 CREATE TABLE class_weekday (
     class_id NVARCHAR(20),
-    weekday_id INT,
+    weekday_id VARCHAR(20),
     FOREIGN KEY (class_id) REFERENCES class(id),
 );
 
