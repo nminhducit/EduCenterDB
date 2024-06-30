@@ -4,13 +4,9 @@ GO
 USE EduCenterDB
 GO
 
-CREATE TABLE category (
-    id NVARCHAR(50) PRIMARY KEY,
-);
-
 CREATE TABLE level (
     id INT PRIMARY KEY,
-    name VARCHAR(50)
+    name VARCHAR(20)
 );
 
 
@@ -19,6 +15,7 @@ CREATE TABLE student (
     first_name NVARCHAR(50),
     last_name NVARCHAR(50),
     date_birth DATE,
+	gender nvarchar(20),
     email VARCHAR(50),
     phone VARCHAR(15),
     street NVARCHAR(100),
@@ -31,7 +28,7 @@ CREATE TABLE payment (
     id INT PRIMARY KEY,
     payment_date DATE,
     amount MONEY,
-    status VARCHAR(50),
+    status VARCHAR(20),
     student_id INT,
     FOREIGN KEY (student_id) REFERENCES student(id)
 );
@@ -63,8 +60,6 @@ CREATE TABLE course (
     id NVARCHAR(50) PRIMARY KEY,
     description NVARCHAR(300),
     level_id INT,
-    category_id NVARCHAR(50),
-    FOREIGN KEY (category_id) REFERENCES category(id),
 	FOREIGN KEY (level_id)	REFERENCES level(id)
 );
 
@@ -72,9 +67,9 @@ CREATE TABLE course_material (
     id NVARCHAR(50) PRIMARY KEY,
     course_id NVARCHAR(50),
     description TEXT,
-	material_type	NVARCHAR(50),
-	material_url		varchar(100),
-	date_add			date,
+	material_type NVARCHAR(50),
+	material_url varchar(100),
+	date_add date,
     FOREIGN KEY (course_id) REFERENCES course(id)
 );
 
@@ -107,7 +102,7 @@ CREATE TABLE student_account (
 );
 
 CREATE TABLE exam (
-    id INT PRIMARY KEY,
+    id NVARCHAR(20) PRIMARY KEY,
     date DATE,
     description TEXT,
     class_id NVARCHAR(20),
@@ -119,7 +114,7 @@ CREATE TABLE grade (
     id INT PRIMARY KEY,
     value INT,
     student_id INT,
-    exam_id INT,
+    exam_id NVARCHAR(20),
     FOREIGN KEY (student_id) REFERENCES student(id),
     FOREIGN KEY (exam_id) REFERENCES exam(id)
 );
