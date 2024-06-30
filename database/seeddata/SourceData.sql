@@ -1,5 +1,3 @@
-
-
 INSERT INTO weekday (id, name) VALUES 
 (1, 'Monday'),
 (2, 'Tuesday'),
@@ -9,6 +7,12 @@ INSERT INTO weekday (id, name) VALUES
 (6, 'Saturday'),
 (7, 'Sunday');
 GO
+
+INSERT INTO level (id, name)
+VALUES
+(1, '0-450'),
+(2, '450-600'),
+(3, '600-750');
 
 INSERT INTO course (id, description, level_id)
 VALUES
@@ -28,12 +32,6 @@ VALUES
 ('S001', 'Speaking', 1)
 ('S002', 'Speaking', 2)
 ('S003', 'Speaking', 3);
-
-INSERT INTO level (id, name)
-VALUES
-(1, '0-450'),
-(2, '450-600'),
-(3, '600-750');
 
 -- Insert data into weekday table
 INSERT INTO weekday (id, name) VALUES
