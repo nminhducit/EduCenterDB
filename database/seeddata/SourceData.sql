@@ -24,6 +24,22 @@ VALUES
 ('S002', 'Speaking', 2),
 ('S003', 'Speaking', 3);
 
+INSERT INTO teacher (id, first_name, last_name, description, date_birth, gender, email, phone, street, city, state, zip)
+VALUES
+(1, 'John', 'Doe', 'English Language Teacher', '1979-05-10', 'Male', 'john.doe@gmail.com', '0905123456', '123 Nguyen Du', 'Hanoi', 'HN', '100000'),
+(2, 'Jane', 'Smith', 'English Language Teacher', '1982-11-23', 'Female', 'jane.smith@gmail.com', '0905234567', '456 Le Loi', 'Ho Chi Minh City', 'HCM', '700000'),
+(3, 'Paul', 'Taylor', 'English Language Teacher', '1975-08-15', 'Male', 'paul.taylor@gmail.com', '0905345678', '789 Vo Van Tan', 'Da Nang', 'DN', '550000'),
+(4, 'Emily', 'Johnson', 'English Language Teacher', '1986-02-04', 'Female', 'emily.johnson@gmail.com', '0905456789', '321 Tran Phu', 'Can Tho', 'CT', '900000'),
+(5, 'Michael', 'Brown', 'English Language Teacher', '1980-09-09', 'Male', 'michael.brown@gmail.com', '0905567890', '654 Ba Thang Hai', 'Hue', 'TH', '530000'),
+(6, 'Sara', 'Wilson', 'English Language Teacher', '1988-12-20', 'Female', 'sara.wilson@gmail.com', '0905678901', '987 Ly Tu Trong', 'Hai Phong', 'HP', '180000');
+
+INSERT INTO teacher (id, first_name, last_name, description, date_birth, gender, email, phone, street, city, state, zip)
+VALUES
+(7, 'Nguyen', 'Thi Hoa', 'English Language Teacher', '1991-07-15', 'Female', 'hoa.nguyen@gmail.com', '0905789012', '135 Nguyen Van Linh', 'Nha Trang', 'NT', '650000'),
+(8, 'Tran', 'Van Nam', 'English Language Teacher', '1984-03-22', 'Male', 'nam.tran@gmail.com', '0905890123', '246 Hai Ba Trung', 'Vung Tau', 'VT', '780000'),
+(9, 'Le', 'Thi Lan', 'English Language Teacher', '1995-05-11', 'Female', 'lan.le@gmail.com', '0905901234', '369 Le Hong Phong', 'Quy Nhon', 'QN', '820000'),
+(10, 'Pham', 'Van Kien', 'English Language Teacher', '1990-10-30', 'Male', 'kien.pham@gmail.com', '0906012345', '147 Tran Hung Dao', 'Bien Hoa', 'BH', '810000');
+
 -- Insert data into class table
 INSERT INTO class (id, start_date, end_date, teacher_id, course_id) VALUES
 ('C01', '2024-07-01', '2024-12-01', 1, 'W001'),
