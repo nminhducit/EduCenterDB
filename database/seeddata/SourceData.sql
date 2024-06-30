@@ -33,16 +33,6 @@ VALUES
 ('S002', 'Speaking', 2)
 ('S003', 'Speaking', 3);
 
--- Insert data into weekday table
-INSERT INTO weekday (id, name) VALUES
-(1, 'Monday'),
-(2, 'Tuesday'),
-(3, 'Wednesday'),
-(4, 'Thursday'),
-(5, 'Friday'),
-(6, 'Saturday'),
-(7, 'Sunday');
-
 -- Insert data into class table
 INSERT INTO class (id, start_date, end_date, teacher_id, course_id) VALUES
 ('C01', '2024-07-01', '2024-12-01', 1, 'W001'),
@@ -58,23 +48,23 @@ INSERT INTO class (id, start_date, end_date, teacher_id, course_id) VALUES
 
 -- Insert data into class_weekday table
 INSERT INTO class_weekday (class_id, weekday_id) VALUES
-('C01', 1),
-('C01', 3),
-('C02', 2),
-('C02', 4),
-('C03', 1),
-('C03', 5),
-('C04', 3),
-('C04', 5),
-('C05', 2),
-('C05', 4),
-('C06', 1),
-('C06', 3),
-('C07', 1),
-('C07', 3),
-('C08', 2),
-('C08', 4),
-('C09', 3),
-('C09', 5),
-('C10', 2),
-('C10', 4);
+('C01', Mon),
+('C01', Wed),
+('C02', Thu),
+('C02', Tue),
+('C03', Mon),
+('C03', Fri),
+('C04', Wed),
+('C04', Fri),
+('C05', Thu),
+('C05', Tue),
+('C06', Mon),
+('C06', Wed),
+('C07', Mon),
+('C07', Wed),
+('C08', Thu),
+('C08', Tue),
+('C09', Wed),
+('C09', Fri),
+('C10', Thu),
+('C10', Tue);
