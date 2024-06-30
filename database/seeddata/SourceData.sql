@@ -10,12 +10,24 @@ INSERT INTO weekday (id, name) VALUES
 (7, 'Sunday');
 GO
 
-INSERT INTO course (id, description, level_id, category_id)
+INSERT INTO course (id, description, level_id)
 VALUES
-    ('W001', 'Writing', 1),
-    ('R002', 'Reading', 2),
-    ('L003', 'Listening', 3),
-	('S004', 'Speaking', 3);
+--Writing
+('W001', 'Writing', 1),
+('W002', 'Writing', 2),
+('W003', 'Writing', 3),
+--Reading
+('R001', 'Reading', 1), 
+('R002', 'Reading', 2), 
+('R003', 'Reading', 3), 
+--Listening
+('L001', 'Listening', 1),
+('L002', 'Listening', 2),
+('L003', 'Listening', 3),
+--Speaking
+('S001', 'Speaking', 1)
+('S002', 'Speaking', 2)
+('S003', 'Speaking', 3);
 
 
 INSERT INTO class (id, name, start_date, end_date, teacher_id, course_id) VALUES
