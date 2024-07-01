@@ -7,19 +7,19 @@ VALUES
 
 INSERT INTO course (id, description, level_id)
 VALUES
---Writing
+--Insert data into Writing
 ('W001', 'Writing', 1),
 ('W002', 'Writing', 2),
 ('W003', 'Writing', 3),
---Reading
+--Insert data into Reading
 ('R001', 'Reading', 1), 
 ('R002', 'Reading', 2), 
 ('R003', 'Reading', 3), 
---Listening
+--Insert data into Listening
 ('L001', 'Listening', 1),
 ('L002', 'Listening', 2),
 ('L003', 'Listening', 3),
---Speaking
+--Insert data into Speaking
 ('S001', 'Speaking', 1),
 ('S002', 'Speaking', 2),
 ('S003', 'Speaking', 3);
@@ -31,10 +31,7 @@ VALUES
 (3, 'Paul', 'Taylor', 'English Language Teacher', '1975-08-15', 'Male', 'paul.taylor@gmail.com', '0905345678', '789 Vo Van Tan', 'Da Nang', 'DN', '550000'),
 (4, 'Emily', 'Johnson', 'English Language Teacher', '1986-02-04', 'Female', 'emily.johnson@gmail.com', '0905456789', '321 Tran Phu', 'Can Tho', 'CT', '900000'),
 (5, 'Michael', 'Brown', 'English Language Teacher', '1980-09-09', 'Male', 'michael.brown@gmail.com', '0905567890', '654 Ba Thang Hai', 'Hue', 'TH', '530000'),
-(6, 'Sara', 'Wilson', 'English Language Teacher', '1988-12-20', 'Female', 'sara.wilson@gmail.com', '0905678901', '987 Ly Tu Trong', 'Hai Phong', 'HP', '180000');
-
-INSERT INTO teacher (id, first_name, last_name, description, date_birth, gender, email, phone, street, city, state, zip)
-VALUES
+(6, 'Sara', 'Wilson', 'English Language Teacher', '1988-12-20', 'Female', 'sara.wilson@gmail.com', '0905678901', '987 Ly Tu Trong', 'Hai Phong', 'HP', '180000'),
 (7, 'Nguyen', 'Thi Hoa', 'English Language Teacher', '1991-07-15', 'Female', 'hoa.nguyen@gmail.com', '0905789012', '135 Nguyen Van Linh', 'Nha Trang', 'NT', '650000'),
 (8, 'Tran', 'Van Nam', 'English Language Teacher', '1984-03-22', 'Male', 'nam.tran@gmail.com', '0905890123', '246 Hai Ba Trung', 'Vung Tau', 'VT', '780000'),
 (9, 'Le', 'Thi Lan', 'English Language Teacher', '1995-05-11', 'Female', 'lan.le@gmail.com', '0905901234', '369 Le Hong Phong', 'Quy Nhon', 'QN', '820000'),
@@ -76,6 +73,7 @@ INSERT INTO class_weekday (class_id, weekday_id) VALUES
 ('C10', 'Thu'),
 ('C10', 'Tue');
 
+-- Insert data into exam table
 INSERT INTO exam (id, date, description, class_id) VALUES
 (1, '2023-06-27', 'Quiz 1', 'C01'),
 (2, '2023-07-27', 'Quiz 2', 'C01'),
@@ -128,110 +126,113 @@ INSERT INTO exam (id, date, description, class_id) VALUES
 (49, '2023-09-27', 'Quiz 3', 'C10'),
 (50, '2023-10-27', 'Final Exam', 'C10');
 
+
+-- Insert data into student table
 INSERT INTO student (id, first_name, last_name, date_birth, email, phone, street, city, state, zip, gender)
 VALUES
-    (1, 'Nguyễn', 'Văn An', '1995-01-15', 'nguyenvanan@gmail.com', '0123456789', 'Số 10 Nguyễn Cơ Thạch', 'Hà Nội', 'Hà Nội', '100000', 'Nam'),
-    (2, 'Trần', 'Thị Bảo', '1996-02-20', 'tranthibao@gmail.com', '0987654321', 'Số 20 Lý Thường Kiệt', 'Hồ Chí Minh', 'Hồ Chí Minh', '700000', 'Nữ'),
-    (3, 'Lê', 'Thành Công', '1997-03-25', 'lethanhcong@gmail.com', '0123456789', 'Số 30 Điện Biên Phủ', 'Đà Nẵng', 'Đà Nẵng', '500000', 'Nam'),
-    (4, 'Phạm', 'Ngọc Diệp', '1998-04-30', 'phamngocdiep@gmail.com', '0987654321', 'Số 40 Lê Lợi', 'Hải Phòng', 'Hải Phòng', '300000', 'Nữ'),
-    (5, 'Hoàng', 'Quang Dũng', '1999-05-10', 'hoangquangdung@gmail.com', '0123456789', 'Số 50 Nguyễn Huệ', 'Cần Thơ', 'Cần Thơ', '900000', 'Nam'),
-    (6, 'Trần', 'Hồng Ngọc', '2000-06-15', 'tranhongngoc@gmail.com', '0987654321', 'Số 60 Trần Hưng Đạo', 'Vũng Tàu', 'Bà Rịa - Vũng Tàu', '800000', 'Nữ'),
-    (7, 'Nguyễn', 'Đức Tuấn', '2001-07-20', 'nguyenductuan@gmail.com', '0123456789', 'Số 70 Phan Chu Trinh', 'Quy Nhơn', 'Bình Định', '590000', 'Nam'),
-    (8, 'Lê', 'Thị Thanh', '2002-08-25', 'lethithanh@gmail.com', '0987654321', 'Số 80 Hoàng Diệu', 'Huế', 'Thừa Thiên Huế', '540000', 'Nữ'),
-    (9, 'Trần', 'Minh Tuấn', '2003-09-30', 'tranminhtuan@gmail.com', '0123456789', 'Số 90 Nguyễn Trãi', 'Nam Định', 'Nam Định', '420000', 'Nam'),
-    (10, 'Phạm', 'Mai Anh', '2004-10-05', 'phammaianh@gmail.com', '0987654321', 'Số 100 Lê Lai', 'Biên Hòa', 'Đồng Nai', '350000', 'Nữ'),
-    (11, 'Nguyễn', 'Thị Mỹ', '1995-11-15', 'nguyenthimy@gmail.com', '0123456789', 'Số 110 Nguyễn Bỉnh Khiêm', 'Long Xuyên', 'An Giang', '880000', 'Nữ'),
-    (12, 'Lê', 'Đình Tùng', '1996-12-20', 'ledinhtung@gmail.com', '0987654321', 'Số 120 Lý Thái Tổ', 'Quảng Ngãi', 'Quảng Ngãi', '470000', 'Nam'),
-    (13, 'Trần', 'Thị Kim Ngân', '1997-01-25', 'tranthikimngan@gmail.com', '0123456789', 'Số 130 Nguyễn Thị Minh Khai', 'Bắc Giang', 'Bắc Giang', '220000', 'Nữ'),
-    (14, 'Phạm', 'Quốc Hùng', '1998-02-28', 'phamquochung@gmail.com', '0987654321', 'Số 140 Trần Hưng Đạo', 'Hà Tĩnh', 'Hà Tĩnh', '480000', 'Nam'),
-    (15, 'Hoàng', 'Thị Lan', '1999-03-10', 'hoangthilan@gmail.com', '0123456789', 'Số 150 Nguyễn Công Trứ', 'Phan Thiết', 'Bình Thuận', '620000', 'Nữ'),
-    (16, 'Nguyễn', 'Văn Nam', '2000-04-15', 'nguyenvannam@gmail.com', '0987654321', 'Số 160 Hùng Vương', 'Thái Nguyên', 'Thái Nguyên', '250000', 'Nam'),
-    (17, 'Trần', 'Thị Ánh', '2001-05-20', 'tranthianh@gmail.com', '0123456789', 'Số 170 Lê Duẩn', 'Nha Trang', 'Khánh Hòa', '570000', 'Nữ'),
-    (18, 'Lê', 'Minh Đức', '2002-06-25', 'leminhduc@gmail.com', '0987654321', 'Số 180 Trần Phú', 'Vĩnh Yên', 'Vĩnh Phúc', '280000', 'Nam'),
-    (19, 'Phạm', 'Thị Thảo', '2003-07-30', 'phamthithao@gmail.com', '0123456789', 'Số 190 Nguyễn Văn Linh', 'Rạch Giá', 'Kiên Giang', '920000', 'Nữ'),
-    (20, 'Hoàng', 'Văn Tùng', '2004-08-05', 'hoangvantung@gmail.com', '0987654321', 'Số 200 Lý Thường Kiệt', 'Cà Mau', 'Cà Mau', '970000', 'Nam'),
-    (21, 'Nguyễn', 'Thị Hương', '1995-09-15', 'nguyenthihuong@gmail.com', '0123456789', 'Số 210 Hùng Vương', 'Hải Dương', 'Hải Dương', '310000', 'Nữ'),
-    (22, 'Trần', 'Văn Hải', '1996-10-20', 'tranvanhai@gmail.com', '0987654321', 'Số 220 Nguyễn Văn Linh', 'Long Xuyên', 'An Giang', '880000', 'Nam'),
-    (23, 'Lê', 'Thị Ngọc', '1997-11-25', 'lengoc@gmail.com', '0123456789', 'Số 230 Nguyễn Hữu Thọ', 'Quy Nhơn', 'Bình Định', '590000', 'Nữ'),
-    (24, 'Phạm', 'Văn Quân', '1998-12-30', 'phamvanquan@gmail.com', '0987654321', 'Số 240 Lê Lai', 'Huế', 'Thừa Thiên Huế', '540000', 'Nam'),
-    (25, 'Hoàng', 'Thị Mai', '1999-01-10', 'hoangthimai@gmail.com', '0123456789', 'Số 250 Phan Chu Trinh', 'Nam Định', 'Nam Định', '420000', 'Nữ'),
-    (26, 'Nguyễn', 'Hồng Sơn', '2000-02-15', 'nguyenhongson@gmail.com', '0987654321', 'Số 260 Lê Thánh Tôn', 'Biên Hòa', 'Đồng Nai', '350000', 'Nam'),
-    (27, 'Trần', 'Mai Anh', '2001-03-20', 'tranmaianh@gmail.com', '0123456789', 'Số 270 Nguyễn Huệ', 'Long Xuyên', 'An Giang', '880000', 'Nữ'),
-    (28, 'Lê', 'Văn Đức', '2002-04-25', 'levanduc@gmail.com', '0987654321', 'Số 280 Lý Thái Tổ', 'Bắc Giang', 'Bắc Giang', '220000', 'Nam'),
-    (29, 'Phạm', 'Thị Lan', '2003-05-30', 'phamthilan@gmail.com', '0123456789', 'Số 290 Trần Phú', 'Hà Tĩnh', 'Hà Tĩnh', '480000', 'Nữ'),
-    (30, 'Hoàng', 'Văn Bình', '2004-06-05', 'hoangvanbinh@gmail.com', '0987654321', 'Số 300 Nguyễn Công Trứ', 'Phan Thiết', 'Bình Thuận', '620000', 'Nam'),
-    (31, 'Nguyễn', 'Thị Hạnh', '1995-07-15', 'nguyenthihanh@gmail.com', '0123456789', 'Số 310 Trần Hưng Đạo', 'Thái Nguyên', 'Thái Nguyên', '250000', 'Nữ'),
-    (32, 'Trần', 'Đức Huy', '1996-08-20', 'tranduchuy@gmail.com', '0987654321', 'Số 320 Lê Duẩn', 'Nha Trang', 'Khánh Hòa', '570000', 'Nam'),
-    (33, 'Lê', 'Thị Hương', '1997-09-25', 'lethihuong@gmail.com', '0123456789', 'Số 330 Hoàng Diệu', 'Vĩnh Yên', 'Vĩnh Phúc', '280000', 'Nữ'),
-    (34, 'Phạm', 'Minh Tuấn', '1998-10-30', 'phamminhtuan@gmail.com', '0987654321', 'Số 340 Nguyễn Văn Linh', 'Rạch Giá', 'Kiên Giang', '920000', 'Nam'),
-    (35, 'Hoàng', 'Thị Hằng', '1999-11-10', 'hoangthihang@gmail.com', '0123456789', 'Số 350 Lý Thường Kiệt', 'Cà Mau', 'Cà Mau', '970000', 'Nữ'),
-    (36, 'Nguyễn', 'Văn Hùng', '2000-12-15', 'nguyenvanhung@gmail.com', '0987654321', 'Số 360 Hùng Vương', 'Hải Dương', 'Hải Dương', '310000', 'Nam'),
-    (37, 'Trần', 'Thị Thảo', '2001-01-20', 'tranthithao@gmail.com', '0123456789', 'Số 370 Nguyễn Văn Linh', 'Long Xuyên', 'An Giang', '880000', 'Nữ'),
-    (38, 'Lê', 'Văn Minh', '2002-02-25', 'levanminh@gmail.com', '0987654321', 'Số 380 Nguyễn Hữu Thọ', 'Quy Nhơn', 'Bình Định', '590000', 'Nam'),
-    (39, 'Phạm', 'Thị Mai', '2003-03-30', 'phamthimai@gmail.com', '0123456789', 'Số 390 Lê Lai', 'Huế', 'Thừa Thiên Huế', '540000', 'Nữ'),
-    (40, 'Hoàng', 'Văn Tùng', '2004-04-05', 'hoangvantung@gmail.com', '0987654321', 'Số 400 Trần Hưng Đạo', 'Nam Định', 'Nam Định', '420000', 'Nam'),
-    (41, 'Nguyễn', 'Thị Hạnh', '1995-05-15', 'nguyenthihanh@gmail.com', '0123456789', 'Số 410 Lý Thái Tổ', 'Biên Hòa', 'Đồng Nai', '350000', 'Nữ'),
-    (42, 'Trần', 'Đức Huy', '1996-06-20', 'tranduchuy@gmail.com', '0987654321', 'Số 420 Lê Lợi', 'Vũng Tàu', 'Bà Rịa - Vũng Tàu', '800000', 'Nam'),
-    (43, 'Lê', 'Thị Hương', '1997-07-25', 'lethihuong@gmail.com', '0123456789', 'Số 430 Nguyễn Văn Linh', 'Quảng Ngãi', 'Quảng Ngãi', '470000', 'Nữ'),
-    (44, 'Phạm', 'Minh Tuấn', '1998-08-30', 'phamminhtuan@gmail.com', '0987654321', 'Số 440 Lê Duẩn', 'Hà Tĩnh', 'Hà Tĩnh', '480000', 'Nam'),
-    (45, 'Hoàng', 'Thị Mai', '1999-09-10', 'hoangthimai@gmail.com', '0123456789', 'Số 450 Nguyễn Công Trứ', 'Phan Thiết', 'Bình Thuận', '620000', 'Nữ'),
-    (46, 'Nguyễn', 'Văn Nam', '2000-10-15', 'nguyenvannam@gmail.com', '0987654321', 'Số 460 Hùng Vương', 'Thái Nguyên', 'Thái Nguyên', '250000', 'Nam'),
-    (47, 'Trần', 'Thị Ánh', '2001-11-20', 'tranthianh@gmail.com', '0123456789', 'Số 470 Lê Thánh Tôn', 'Nha Trang', 'Khánh Hòa', '570000', 'Nữ'),
-    (48, 'Lê', 'Minh Đức', '2002-12-25', 'leminhduc@gmail.com', '0987654321', 'Số 480 Trần Phú', 'Vĩnh Yên', 'Vĩnh Phúc', '280000', 'Nam'),
-    (49, 'Phạm', 'Thị Lan', '2003-01-30', 'phamthilan@gmail.com', '0123456789', 'Số 490 Nguyễn Văn Linh', 'Rạch Giá', 'Kiên Giang', '920000', 'Nữ'),
-    (50, 'Hoàng', 'Văn Tùng', '2004-02-05', 'hoangvantung@gmail.com', '0987654321', 'Số 500 Lý Thường Kiệt', 'Cà Mau', 'Cà Mau', '970000', 'Nam'),
-    (51, 'Nguyễn', 'Thị Hương', '1995-03-15', 'nguyenthihuong@gmail.com', '0123456789', 'Số 510 Nguyễn Bỉnh Khiêm', 'Long Xuyên', 'An Giang', '880000', 'Nữ'),
-    (52, 'Trần', 'Đình Tùng', '1996-04-20', 'ledinhtung@gmail.com', '0987654321', 'Số 520 Lý Thái Tổ', 'Quảng Ngãi', 'Quảng Ngãi', '470000', 'Nam'),
-    (53, 'Lê', 'Thị Kim Ngân', '1997-05-25', 'tranthikimngan@gmail.com', '0123456789', 'Số 530 Nguyễn Thị Minh Khai', 'Bắc Giang', 'Bắc Giang', '220000', 'Nữ'),
-    (54, 'Phạm', 'Quốc Hùng', '1998-06-28', 'phamquochung@gmail.com', '0987654321', 'Số 540 Trần Hưng Đạo', 'Hà Tĩnh', 'Hà Tĩnh', '480000', 'Nam'),
-    (55, 'Hoàng', 'Thị Lan', '1999-07-10', 'hoangthilan@gmail.com', '0123456789', 'Số 550 Nguyễn Công Trứ', 'Phan Thiết', 'Bình Thuận', '620000', 'Nữ'),
-    (56, 'Nguyễn', 'Văn Nam', '2000-08-15', 'nguyenvannam@gmail.com', '0987654321', 'Số 560 Hùng Vương', 'Thái Nguyên', 'Thái Nguyên', '250000', 'Nam'),
-    (57, 'Trần', 'Thị Ánh', '2001-09-20', 'tranthianh@gmail.com', '0123456789', 'Số 570 Lê Duẩn', 'Nha Trang', 'Khánh Hòa', '570000', 'Nữ'),
-    (58, 'Lê', 'Minh Đức', '2002-10-25', 'leminhduc@gmail.com', '0987654321', 'Số 580 Trần Phú', 'Vĩnh Yên', 'Vĩnh Phúc', '280000', 'Nam'),
-    (59, 'Phạm', 'Thị Lan', '2003-11-30', 'phamthilan@gmail.com', '0123456789', 'Số 590 Nguyễn Văn Linh', 'Rạch Giá', 'Kiên Giang', '920000', 'Nữ'),
-    (60, 'Hoàng', 'Văn Tùng', '2004-12-05', 'hoangvantung@gmail.com', '0987654321', 'Số 600 Lý Thường Kiệt', 'Cà Mau', 'Cà Mau', '970000', 'Nam'),
-    (61, 'Nguyễn', 'Thị Hương', '1995-01-15', 'nguyenthihuong@gmail.com', '0123456789', 'Số 610 Hùng Vương', 'Hải Dương', 'Hải Dương', '310000', 'Nữ'),
-    (62, 'Trần', 'Văn Hải', '1996-02-20', 'tranvanhai@gmail.com', '0987654321', 'Số 620 Nguyễn Văn Linh', 'Long Xuyên', 'An Giang', '880000', 'Nam'),
-    (63, 'Lê', 'Thị Ngọc', '1997-03-25', 'lengoc@gmail.com', '0123456789', 'Số 630 Nguyễn Hữu Thọ', 'Quy Nhơn', 'Bình Định', '590000', 'Nữ'),
-    (64, 'Phạm', 'Văn Quân', '1998-04-30', 'phamvanquan@gmail.com', '0987654321', 'Số 640 Lê Lai', 'Huế', 'Thừa Thiên Huế', '540000', 'Nam'),
-    (65, 'Hoàng', 'Thị Mai', '1999-05-10', 'hoangthimai@gmail.com', '0123456789', 'Số 650 Phan Chu Trinh', 'Nam Định', 'Nam Định', '420000', 'Nữ'),
-    (66, 'Nguyễn', 'Hồng Sơn', '2000-06-15', 'nguyenhongson@gmail.com', '0987654321', 'Số 660 Lê Thánh Tôn', 'Biên Hòa', 'Đồng Nai', '350000', 'Nam'),
-    (67, 'Trần', 'Mai Anh', '2001-07-20', 'tranmaianh@gmail.com', '0123456789', 'Số 670 Nguyễn Huệ', 'Long Xuyên', 'An Giang', '880000', 'Nữ'),
-    (68, 'Lê', 'Văn Đức', '2002-08-25', 'levanduc@gmail.com', '0987654321', 'Số 680 Lý Thái Tổ', 'Bắc Giang', 'Bắc Giang', '220000', 'Nam'),
-    (69, 'Phạm', 'Thị Lan', '2003-09-30', 'phamthilan@gmail.com', '0123456789', 'Số 690 Trần Phú', 'Hà Tĩnh', 'Hà Tĩnh', '480000', 'Nữ'),
-    (70, 'Hoàng', 'Văn Bình', '2004-10-05', 'hoangvanbinh@gmail.com', '0987654321', 'Số 700 Nguyễn Công Trứ', 'Phan Thiết', 'Bình Thuận', '620000', 'Nam'),
-    (71, 'Nguyễn', 'Thị Hạnh', '1995-11-15', 'nguyenthihanh@gmail.com', '0123456789', 'Số 710 Trần Hưng Đạo', 'Thái Nguyên', 'Thái Nguyên', '250000', 'Nữ'),
-    (72, 'Trần', 'Đức Huy', '1996-12-20', 'tranduchuy@gmail.com', '0987654321', 'Số 720 Lê Duẩn', 'Nha Trang', 'Khánh Hòa', '570000', 'Nam'),
-    (73, 'Lê', 'Thị Hương', '1997-01-25', 'lethihuong@gmail.com', '0123456789', 'Số 730 Hoàng Diệu', 'Vĩnh Yên', 'Vĩnh Phúc', '280000', 'Nữ'),
-    (74, 'Phạm', 'Minh Tuấn', '1998-02-28', 'phamminhtuan@gmail.com', '0987654321', 'Số 740 Nguyễn Văn Linh', 'Rạch Giá', 'Kiên Giang', '920000', 'Nam'),
-    (75, 'Hoàng', 'Thị Lan', '1999-03-10', 'hoangthilan@gmail.com', '0123456789', 'Số 750 Nguyễn Công Trứ', 'Phan Thiết', 'Bình Thuận', '620000', 'Nữ'),
-    (76, 'Nguyễn', 'Văn Nam', '2000-04-15', 'nguyenvannam@gmail.com', '0987654321', 'Số 760 Hùng Vương', 'Thái Nguyên', 'Thái Nguyên', '250000', 'Nam'),
-    (77, 'Trần', 'Thị Ánh', '2001-05-20', 'tranthianh@gmail.com', '0123456789', 'Số 770 Lê Thánh Tôn', 'Nha Trang', 'Khánh Hòa', '570000', 'Nữ'),
-    (78, 'Lê', 'Minh Đức', '2002-06-25', 'leminhduc@gmail.com', '0987654321', 'Số 780 Trần Phú', 'Vĩnh Yên', 'Vĩnh Phúc', '280000', 'Nam'),
-    (79, 'Phạm', 'Thị Lan', '2003-07-30', 'phamthilan@gmail.com', '0123456789', 'Số 790 Nguyễn Văn Linh', 'Rạch Giá', 'Kiên Giang', '920000', 'Nữ'),
-    (80, 'Hoàng', 'Văn Tùng', '2004-08-05', 'hoangvantung@gmail.com', '0987654321', 'Số 800 Lý Thường Kiệt', 'Cà Mau', 'Cà Mau', '970000', 'Nam'),
-    (81, 'Nguyễn', 'Thị Hương', '1995-09-15', 'nguyenthihuong@gmail.com', '0123456789', 'Số 810 Nguyễn Bỉnh Khiêm', 'Long Xuyên', 'An Giang', '880000', 'Nữ'),
-    (82, 'Trần', 'Đình Tùng', '1996-10-20', 'ledinhtung@gmail.com', '0987654321', 'Số 820 Lý Thái Tổ', 'Quảng Ngãi', 'Quảng Ngãi', '470000', 'Nam'),
-    (83, 'Lê', 'Thị Kim Ngân', '1997-11-25', 'tranthikimngan@gmail.com', '0123456789', 'Số 830 Nguyễn Thị Minh Khai', 'Bắc Giang', 'Bắc Giang', '220000', 'Nữ'),
-    (84, 'Phạm', 'Quốc Hùng', '1998-12-30', 'phamquochung@gmail.com', '0987654321', 'Số 840 Trần Hưng Đạo', 'Hà Tĩnh', 'Hà Tĩnh', '480000', 'Nam'),
-    (85, 'Hoàng', 'Thị Lan', '1999-01-10', 'hoangthilan@gmail.com', '0123456789', 'Số 850 Nguyễn Công Trứ', 'Phan Thiết', 'Bình Thuận', '620000', 'Nữ'),
-    (86, 'Nguyễn', 'Văn Hùng', '2000-02-15', 'nguyenvanhung@gmail.com', '0987654321', 'Số 860 Hùng Vương', 'Hải Dương', 'Hải Dương', '310000', 'Nam'),
-    (87, 'Trần', 'Thị Thảo', '2001-03-20', 'tranthithao@gmail.com', '0123456789', 'Số 870 Nguyễn Văn Linh', 'Long Xuyên', 'An Giang', '880000', 'Nữ'),
-    (88, 'Lê', 'Văn Minh', '2002-04-25', 'levanminh@gmail.com', '0987654321', 'Số 880 Nguyễn Hữu Thọ', 'Quy Nhơn', 'Bình Định', '590000', 'Nam'),
-    (89, 'Phạm', 'Thị Mai', '2003-05-30', 'phamthimai@gmail.com', '0123456789', 'Số 890 Lê Lai', 'Huế', 'Thừa Thiên Huế', '540000', 'Nữ'),
-    (90, 'Hoàng', 'Văn Tùng', '2004-06-05', 'hoangvantung@gmail.com', '0987654321', 'Số 900 Trần Hưng Đạo', 'Nam Định', 'Nam Định', '420000', 'Nam'),
-    (91, 'Nguyễn', 'Thị Hạnh', '1995-07-15', 'nguyenthihanh@gmail.com', '0123456789', 'Số 910 Lý Thái Tổ', 'Biên Hòa', 'Đồng Nai', '350000', 'Nữ'),
-    (92, 'Trần', 'Đức Huy', '1996-08-20', 'tranduchuy@gmail.com', '0987654321', 'Số 920 Lê Duẩn', 'Vũng Tàu', 'Bà Rịa - Vũng Tàu', '800000', 'Nam'),
-    (93, 'Lê', 'Thị Hương', '1997-09-25', 'lethihuong@gmail.com', '0123456789', 'Số 930 Nguyễn Văn Linh', 'Quảng Ngãi', 'Quảng Ngãi', '470000', 'Nữ'),
-    (94, 'Phạm', 'Minh Tuấn', '1998-10-30', 'phamminhtuan@gmail.com', '0987654321', 'Số 940 Lê Duẩn', 'Hà Tĩnh', 'Hà Tĩnh', '480000', 'Nam'),
-    (95, 'Hoàng', 'Thị Hằng', '1999-11-10', 'hoangthihang@gmail.com', '0123456789', 'Số 950 Lý Thường Kiệt', 'Cà Mau', 'Cà Mau', '970000', 'Nữ'),
-    (96, 'Nguyễn', 'Văn Hùng', '2000-12-15', 'nguyenvanhung@gmail.com', '0987654321', 'Số 960 Hùng Vương', 'Hải Dương', 'Hải Dương', '310000', 'Nam'),
-    (97, 'Trần', 'Thị Thảo', '2001-01-20', 'tranthithao@gmail.com', '0123456789', 'Số 970 Nguyễn Văn Linh', 'Long Xuyên', 'An Giang', '880000', 'Nữ'),
-    (98, 'Lê', 'Văn Minh', '2002-02-25', 'levanminh@gmail.com', '0987654321', 'Số 980 Nguyễn Hữu Thọ', 'Quy Nhơn', 'Bình Định', '590000', 'Nam'),
-    (99, 'Phạm', 'Thị Mai', '2003-03-30', 'phamthimai@gmail.com', '0123456789', 'Số 990 Lê Lai', 'Huế', 'Thừa Thiên Huế', '540000', 'Nữ'),
-    (100, 'Hoàng', 'Văn Tùng', '2004-04-05', 'hoangvantung@gmail.com', '0987654321', 'Số 1000 Trần Hưng Đạo', 'Nam Định', 'Nam Định', '420000', 'Nam');
+    (1, 'Nguyễn', 'Văn An', '1995-01-15', 'nguyenvanan@gmail.com', '0123456789', 'Số 10 Nguyễn Cơ Thạch', 'Hà Nội', 'Hà Nội', '100000', 'Male'),
+    (2, 'Trần', 'Thị Bảo', '1996-02-20', 'tranthibao@gmail.com', '0987654321', 'Số 20 Lý Thường Kiệt', 'Hồ Chí Minh', 'Hồ Chí Minh', '700000', 'Female'),
+    (3, 'Lê', 'Thành Công', '1997-03-25', 'lethanhcong@gmail.com', '0123456789', 'Số 30 Điện Biên Phủ', 'Đà Nẵng', 'Đà Nẵng', '500000', 'Male'),
+    (4, 'Phạm', 'Ngọc Diệp', '1998-04-30', 'phamngocdiep@gmail.com', '0987654321', 'Số 40 Lê Lợi', 'Hải Phòng', 'Hải Phòng', '300000', 'Female'),
+    (5, 'Hoàng', 'Quang Dũng', '1999-05-10', 'hoangquangdung@gmail.com', '0123456789', 'Số 50 Nguyễn Huệ', 'Cần Thơ', 'Cần Thơ', '900000', 'Male'),
+    (6, 'Trần', 'Hồng Ngọc', '2000-06-15', 'tranhongngoc@gmail.com', '0987654321', 'Số 60 Trần Hưng Đạo', 'Vũng Tàu', 'Bà Rịa - Vũng Tàu', '800000', 'Female'),
+    (7, 'Nguyễn', 'Đức Tuấn', '2001-07-20', 'nguyenductuan@gmail.com', '0123456789', 'Số 70 Phan Chu Trinh', 'Quy Nhơn', 'Bình Định', '590000', 'Male'),
+    (8, 'Lê', 'Thị Thanh', '2002-08-25', 'lethithanh@gmail.com', '0987654321', 'Số 80 Hoàng Diệu', 'Huế', 'Thừa Thiên Huế', '540000', 'Female'),
+    (9, 'Trần', 'Minh Tuấn', '2003-09-30', 'tranminhtuan@gmail.com', '0123456789', 'Số 90 Nguyễn Trãi', 'Nam Định', 'Nam Định', '420000', 'Male'),
+    (10, 'Phạm', 'Mai Anh', '2004-10-05', 'phammaianh@gmail.com', '0987654321', 'Số 100 Lê Lai', 'Biên Hòa', 'Đồng Nai', '350000', 'Female'),
+    (11, 'Nguyễn', 'Thị Mỹ', '1995-11-15', 'nguyenthimy@gmail.com', '0123456789', 'Số 110 Nguyễn Bỉnh Khiêm', 'Long Xuyên', 'An Giang', '880000', 'Female'),
+    (12, 'Lê', 'Đình Tùng', '1996-12-20', 'ledinhtung@gmail.com', '0987654321', 'Số 120 Lý Thái Tổ', 'Quảng Ngãi', 'Quảng Ngãi', '470000', 'Male'),
+    (13, 'Trần', 'Thị Kim Ngân', '1997-01-25', 'tranthikimngan@gmail.com', '0123456789', 'Số 130 Nguyễn Thị Minh Khai', 'Bắc Giang', 'Bắc Giang', '220000', 'Female'),
+    (14, 'Phạm', 'Quốc Hùng', '1998-02-28', 'phamquochung@gmail.com', '0987654321', 'Số 140 Trần Hưng Đạo', 'Hà Tĩnh', 'Hà Tĩnh', '480000', 'Male'),
+    (15, 'Hoàng', 'Thị Lan', '1999-03-10', 'hoangthilan@gmail.com', '0123456789', 'Số 150 Nguyễn Công Trứ', 'Phan Thiết', 'Bình Thuận', '620000', 'Female'),
+    (16, 'Nguyễn', 'Văn Nam', '2000-04-15', 'nguyenvannam@gmail.com', '0987654321', 'Số 160 Hùng Vương', 'Thái Nguyên', 'Thái Nguyên', '250000', 'Male'),
+    (17, 'Trần', 'Thị Ánh', '2001-05-20', 'tranthianh@gmail.com', '0123456789', 'Số 170 Lê Duẩn', 'Nha Trang', 'Khánh Hòa', '570000', 'Female'),
+    (18, 'Lê', 'Minh Đức', '2002-06-25', 'leminhduc@gmail.com', '0987654321', 'Số 180 Trần Phú', 'Vĩnh Yên', 'Vĩnh Phúc', '280000', 'Male'),
+    (19, 'Phạm', 'Thị Thảo', '2003-07-30', 'phamthithao@gmail.com', '0123456789', 'Số 190 Nguyễn Văn Linh', 'Rạch Giá', 'Kiên Giang', '920000', 'Female'),
+    (20, 'Hoàng', 'Văn Tùng', '2004-08-05', 'hoangvantung@gmail.com', '0987654321', 'Số 200 Lý Thường Kiệt', 'Cà Mau', 'Cà Mau', '970000', 'Male'),
+    (21, 'Nguyễn', 'Thị Hương', '1995-09-15', 'nguyenthihuong@gmail.com', '0123456789', 'Số 210 Hùng Vương', 'Hải Dương', 'Hải Dương', '310000', 'Female'),
+    (22, 'Trần', 'Văn Hải', '1996-10-20', 'tranvanhai@gmail.com', '0987654321', 'Số 220 Nguyễn Văn Linh', 'Long Xuyên', 'An Giang', '880000', 'Male'),
+    (23, 'Lê', 'Thị Ngọc', '1997-11-25', 'lengoc@gmail.com', '0123456789', 'Số 230 Nguyễn Hữu Thọ', 'Quy Nhơn', 'Bình Định', '590000', 'Female'),
+    (24, 'Phạm', 'Văn Quân', '1998-12-30', 'phamvanquan@gmail.com', '0987654321', 'Số 240 Lê Lai', 'Huế', 'Thừa Thiên Huế', '540000', 'Male'),
+    (25, 'Hoàng', 'Thị Mai', '1999-01-10', 'hoangthimai@gmail.com', '0123456789', 'Số 250 Phan Chu Trinh', 'Nam Định', 'Nam Định', '420000', 'Female'),
+    (26, 'Nguyễn', 'Hồng Sơn', '2000-02-15', 'nguyenhongson@gmail.com', '0987654321', 'Số 260 Lê Thánh Tôn', 'Biên Hòa', 'Đồng Nai', '350000', 'Male'),
+    (27, 'Trần', 'Mai Anh', '2001-03-20', 'tranmaianh@gmail.com', '0123456789', 'Số 270 Nguyễn Huệ', 'Long Xuyên', 'An Giang', '880000', 'Female'),
+    (28, 'Lê', 'Văn Đức', '2002-04-25', 'levanduc@gmail.com', '0987654321', 'Số 280 Lý Thái Tổ', 'Bắc Giang', 'Bắc Giang', '220000', 'Male'),
+    (29, 'Phạm', 'Thị Lan', '2003-05-30', 'phamthilan@gmail.com', '0123456789', 'Số 290 Trần Phú', 'Hà Tĩnh', 'Hà Tĩnh', '480000', 'Female'),
+    (30, 'Hoàng', 'Văn Bình', '2004-06-05', 'hoangvanbinh@gmail.com', '0987654321', 'Số 300 Nguyễn Công Trứ', 'Phan Thiết', 'Bình Thuận', '620000', 'Male'),
+    (31, 'Nguyễn', 'Thị Hạnh', '1995-07-15', 'nguyenthihanh@gmail.com', '0123456789', 'Số 310 Trần Hưng Đạo', 'Thái Nguyên', 'Thái Nguyên', '250000', 'Female'),
+    (32, 'Trần', 'Đức Huy', '1996-08-20', 'tranduchuy@gmail.com', '0987654321', 'Số 320 Lê Duẩn', 'Nha Trang', 'Khánh Hòa', '570000', 'Male'),
+    (33, 'Lê', 'Thị Hương', '1997-09-25', 'lethihuong@gmail.com', '0123456789', 'Số 330 Hoàng Diệu', 'Vĩnh Yên', 'Vĩnh Phúc', '280000', 'Female'),
+    (34, 'Phạm', 'Minh Tuấn', '1998-10-30', 'phamminhtuan@gmail.com', '0987654321', 'Số 340 Nguyễn Văn Linh', 'Rạch Giá', 'Kiên Giang', '920000', 'Male'),
+    (35, 'Hoàng', 'Thị Hằng', '1999-11-10', 'hoangthihang@gmail.com', '0123456789', 'Số 350 Lý Thường Kiệt', 'Cà Mau', 'Cà Mau', '970000', 'Female'),
+    (36, 'Nguyễn', 'Văn Hùng', '2000-12-15', 'nguyenvanhung@gmail.com', '0987654321', 'Số 360 Hùng Vương', 'Hải Dương', 'Hải Dương', '310000', 'Male'),
+    (37, 'Trần', 'Thị Thảo', '2001-01-20', 'tranthithao@gmail.com', '0123456789', 'Số 370 Nguyễn Văn Linh', 'Long Xuyên', 'An Giang', '880000', 'Female'),
+    (38, 'Lê', 'Văn Minh', '2002-02-25', 'levanminh@gmail.com', '0987654321', 'Số 380 Nguyễn Hữu Thọ', 'Quy Nhơn', 'Bình Định', '590000', 'Male'),
+    (39, 'Phạm', 'Thị Mai', '2003-03-30', 'phamthimai@gmail.com', '0123456789', 'Số 390 Lê Lai', 'Huế', 'Thừa Thiên Huế', '540000', 'Female'),
+    (40, 'Hoàng', 'Văn Tùng', '2004-04-05', 'hoangvantung@gmail.com', '0987654321', 'Số 400 Trần Hưng Đạo', 'Nam Định', 'Nam Định', '420000', 'Male'),
+    (41, 'Nguyễn', 'Thị Hạnh', '1995-05-15', 'nguyenthihanh@gmail.com', '0123456789', 'Số 410 Lý Thái Tổ', 'Biên Hòa', 'Đồng Nai', '350000', 'Female'),
+    (42, 'Trần', 'Đức Huy', '1996-06-20', 'tranduchuy@gmail.com', '0987654321', 'Số 420 Lê Lợi', 'Vũng Tàu', 'Bà Rịa - Vũng Tàu', '800000', 'Male'),
+    (43, 'Lê', 'Thị Hương', '1997-07-25', 'lethihuong@gmail.com', '0123456789', 'Số 430 Nguyễn Văn Linh', 'Quảng Ngãi', 'Quảng Ngãi', '470000', 'Female'),
+    (44, 'Phạm', 'Minh Tuấn', '1998-08-30', 'phamminhtuan@gmail.com', '0987654321', 'Số 440 Lê Duẩn', 'Hà Tĩnh', 'Hà Tĩnh', '480000', 'Male'),
+    (45, 'Hoàng', 'Thị Mai', '1999-09-10', 'hoangthimai@gmail.com', '0123456789', 'Số 450 Nguyễn Công Trứ', 'Phan Thiết', 'Bình Thuận', '620000', 'Female'),
+    (46, 'Nguyễn', 'Văn Nam', '2000-10-15', 'nguyenvannam@gmail.com', '0987654321', 'Số 460 Hùng Vương', 'Thái Nguyên', 'Thái Nguyên', '250000', 'Male'),
+    (47, 'Trần', 'Thị Ánh', '2001-11-20', 'tranthianh@gmail.com', '0123456789', 'Số 470 Lê Thánh Tôn', 'Nha Trang', 'Khánh Hòa', '570000', 'Female'),
+    (48, 'Lê', 'Minh Đức', '2002-12-25', 'leminhduc@gmail.com', '0987654321', 'Số 480 Trần Phú', 'Vĩnh Yên', 'Vĩnh Phúc', '280000', 'Male'),
+    (49, 'Phạm', 'Thị Lan', '2003-01-30', 'phamthilan@gmail.com', '0123456789', 'Số 490 Nguyễn Văn Linh', 'Rạch Giá', 'Kiên Giang', '920000', 'Female'),
+    (50, 'Hoàng', 'Văn Tùng', '2004-02-05', 'hoangvantung@gmail.com', '0987654321', 'Số 500 Lý Thường Kiệt', 'Cà Mau', 'Cà Mau', '970000', 'Male'),
+    (51, 'Nguyễn', 'Thị Hương', '1995-03-15', 'nguyenthihuong@gmail.com', '0123456789', 'Số 510 Nguyễn Bỉnh Khiêm', 'Long Xuyên', 'An Giang', '880000', 'Female'),
+    (52, 'Trần', 'Đình Tùng', '1996-04-20', 'ledinhtung@gmail.com', '0987654321', 'Số 520 Lý Thái Tổ', 'Quảng Ngãi', 'Quảng Ngãi', '470000', 'Male'),
+    (53, 'Lê', 'Thị Kim Ngân', '1997-05-25', 'tranthikimngan@gmail.com', '0123456789', 'Số 530 Nguyễn Thị Minh Khai', 'Bắc Giang', 'Bắc Giang', '220000', 'Female'),
+    (54, 'Phạm', 'Quốc Hùng', '1998-06-28', 'phamquochung@gmail.com', '0987654321', 'Số 540 Trần Hưng Đạo', 'Hà Tĩnh', 'Hà Tĩnh', '480000', 'Male'),
+    (55, 'Hoàng', 'Thị Lan', '1999-07-10', 'hoangthilan@gmail.com', '0123456789', 'Số 550 Nguyễn Công Trứ', 'Phan Thiết', 'Bình Thuận', '620000', 'Female'),
+    (56, 'Nguyễn', 'Văn Nam', '2000-08-15', 'nguyenvannam@gmail.com', '0987654321', 'Số 560 Hùng Vương', 'Thái Nguyên', 'Thái Nguyên', '250000', 'Male'),
+    (57, 'Trần', 'Thị Ánh', '2001-09-20', 'tranthianh@gmail.com', '0123456789', 'Số 570 Lê Duẩn', 'Nha Trang', 'Khánh Hòa', '570000', 'Female'),
+    (58, 'Lê', 'Minh Đức', '2002-10-25', 'leminhduc@gmail.com', '0987654321', 'Số 580 Trần Phú', 'Vĩnh Yên', 'Vĩnh Phúc', '280000', 'Male'),
+    (59, 'Phạm', 'Thị Lan', '2003-11-30', 'phamthilan@gmail.com', '0123456789', 'Số 590 Nguyễn Văn Linh', 'Rạch Giá', 'Kiên Giang', '920000', 'Female'),
+    (60, 'Hoàng', 'Văn Tùng', '2004-12-05', 'hoangvantung@gmail.com', '0987654321', 'Số 600 Lý Thường Kiệt', 'Cà Mau', 'Cà Mau', '970000', 'Male'),
+    (61, 'Nguyễn', 'Thị Hương', '1995-01-15', 'nguyenthihuong@gmail.com', '0123456789', 'Số 610 Hùng Vương', 'Hải Dương', 'Hải Dương', '310000', 'Female'),
+    (62, 'Trần', 'Văn Hải', '1996-02-20', 'tranvanhai@gmail.com', '0987654321', 'Số 620 Nguyễn Văn Linh', 'Long Xuyên', 'An Giang', '880000', 'Male'),
+    (63, 'Lê', 'Thị Ngọc', '1997-03-25', 'lengoc@gmail.com', '0123456789', 'Số 630 Nguyễn Hữu Thọ', 'Quy Nhơn', 'Bình Định', '590000', 'Female'),
+    (64, 'Phạm', 'Văn Quân', '1998-04-30', 'phamvanquan@gmail.com', '0987654321', 'Số 640 Lê Lai', 'Huế', 'Thừa Thiên Huế', '540000', 'Male'),
+    (65, 'Hoàng', 'Thị Mai', '1999-05-10', 'hoangthimai@gmail.com', '0123456789', 'Số 650 Phan Chu Trinh', 'Nam Định', 'Nam Định', '420000', 'Female'),
+    (66, 'Nguyễn', 'Hồng Sơn', '2000-06-15', 'nguyenhongson@gmail.com', '0987654321', 'Số 660 Lê Thánh Tôn', 'Biên Hòa', 'Đồng Nai', '350000', 'Male'),
+    (67, 'Trần', 'Mai Anh', '2001-07-20', 'tranmaianh@gmail.com', '0123456789', 'Số 670 Nguyễn Huệ', 'Long Xuyên', 'An Giang', '880000', 'Female'),
+    (68, 'Lê', 'Văn Đức', '2002-08-25', 'levanduc@gmail.com', '0987654321', 'Số 680 Lý Thái Tổ', 'Bắc Giang', 'Bắc Giang', '220000', 'Male'),
+    (69, 'Phạm', 'Thị Lan', '2003-09-30', 'phamthilan@gmail.com', '0123456789', 'Số 690 Trần Phú', 'Hà Tĩnh', 'Hà Tĩnh', '480000', 'Female'),
+    (70, 'Hoàng', 'Văn Bình', '2004-10-05', 'hoangvanbinh@gmail.com', '0987654321', 'Số 700 Nguyễn Công Trứ', 'Phan Thiết', 'Bình Thuận', '620000', 'Male'),
+    (71, 'Nguyễn', 'Thị Hạnh', '1995-11-15', 'nguyenthihanh@gmail.com', '0123456789', 'Số 710 Trần Hưng Đạo', 'Thái Nguyên', 'Thái Nguyên', '250000', 'Female'),
+    (72, 'Trần', 'Đức Huy', '1996-12-20', 'tranduchuy@gmail.com', '0987654321', 'Số 720 Lê Duẩn', 'Nha Trang', 'Khánh Hòa', '570000', 'Male'),
+    (73, 'Lê', 'Thị Hương', '1997-01-25', 'lethihuong@gmail.com', '0123456789', 'Số 730 Hoàng Diệu', 'Vĩnh Yên', 'Vĩnh Phúc', '280000', 'Female'),
+    (74, 'Phạm', 'Minh Tuấn', '1998-02-28', 'phamminhtuan@gmail.com', '0987654321', 'Số 740 Nguyễn Văn Linh', 'Rạch Giá', 'Kiên Giang', '920000', 'Male'),
+    (75, 'Hoàng', 'Thị Lan', '1999-03-10', 'hoangthilan@gmail.com', '0123456789', 'Số 750 Nguyễn Công Trứ', 'Phan Thiết', 'Bình Thuận', '620000', 'Female'),
+    (76, 'Nguyễn', 'Văn Nam', '2000-04-15', 'nguyenvannam@gmail.com', '0987654321', 'Số 760 Hùng Vương', 'Thái Nguyên', 'Thái Nguyên', '250000', 'Male'),
+    (77, 'Trần', 'Thị Ánh', '2001-05-20', 'tranthianh@gmail.com', '0123456789', 'Số 770 Lê Thánh Tôn', 'Nha Trang', 'Khánh Hòa', '570000', 'Female'),
+    (78, 'Lê', 'Minh Đức', '2002-06-25', 'leminhduc@gmail.com', '0987654321', 'Số 780 Trần Phú', 'Vĩnh Yên', 'Vĩnh Phúc', '280000', 'Male'),
+    (79, 'Phạm', 'Thị Lan', '2003-07-30', 'phamthilan@gmail.com', '0123456789', 'Số 790 Nguyễn Văn Linh', 'Rạch Giá', 'Kiên Giang', '920000', 'Female'),
+    (80, 'Hoàng', 'Văn Tùng', '2004-08-05', 'hoangvantung@gmail.com', '0987654321', 'Số 800 Lý Thường Kiệt', 'Cà Mau', 'Cà Mau', '970000', 'Male'),
+    (81, 'Nguyễn', 'Thị Hương', '1995-09-15', 'nguyenthihuong@gmail.com', '0123456789', 'Số 810 Nguyễn Bỉnh Khiêm', 'Long Xuyên', 'An Giang', '880000', 'Female'),
+    (82, 'Trần', 'Đình Tùng', '1996-10-20', 'ledinhtung@gmail.com', '0987654321', 'Số 820 Lý Thái Tổ', 'Quảng Ngãi', 'Quảng Ngãi', '470000', 'Male'),
+    (83, 'Lê', 'Thị Kim Ngân', '1997-11-25', 'tranthikimngan@gmail.com', '0123456789', 'Số 830 Nguyễn Thị Minh Khai', 'Bắc Giang', 'Bắc Giang', '220000', 'Female'),
+    (84, 'Phạm', 'Quốc Hùng', '1998-12-30', 'phamquochung@gmail.com', '0987654321', 'Số 840 Trần Hưng Đạo', 'Hà Tĩnh', 'Hà Tĩnh', '480000', 'Male'),
+    (85, 'Hoàng', 'Thị Lan', '1999-01-10', 'hoangthilan@gmail.com', '0123456789', 'Số 850 Nguyễn Công Trứ', 'Phan Thiết', 'Bình Thuận', '620000', 'Female'),
+    (86, 'Nguyễn', 'Văn Hùng', '2000-02-15', 'nguyenvanhung@gmail.com', '0987654321', 'Số 860 Hùng Vương', 'Hải Dương', 'Hải Dương', '310000', 'Male'),
+    (87, 'Trần', 'Thị Thảo', '2001-03-20', 'tranthithao@gmail.com', '0123456789', 'Số 870 Nguyễn Văn Linh', 'Long Xuyên', 'An Giang', '880000', 'Female'),
+    (88, 'Lê', 'Văn Minh', '2002-04-25', 'levanminh@gmail.com', '0987654321', 'Số 880 Nguyễn Hữu Thọ', 'Quy Nhơn', 'Bình Định', '590000', 'Male'),
+    (89, 'Phạm', 'Thị Mai', '2003-05-30', 'phamthimai@gmail.com', '0123456789', 'Số 890 Lê Lai', 'Huế', 'Thừa Thiên Huế', '540000', 'Female'),
+    (90, 'Hoàng', 'Văn Tùng', '2004-06-05', 'hoangvantung@gmail.com', '0987654321', 'Số 900 Trần Hưng Đạo', 'Nam Định', 'Nam Định', '420000', 'Male'),
+    (91, 'Nguyễn', 'Thị Hạnh', '1995-07-15', 'nguyenthihanh@gmail.com', '0123456789', 'Số 910 Lý Thái Tổ', 'Biên Hòa', 'Đồng Nai', '350000', 'Female'),
+    (92, 'Trần', 'Đức Huy', '1996-08-20', 'tranduchuy@gmail.com', '0987654321', 'Số 920 Lê Duẩn', 'Vũng Tàu', 'Bà Rịa - Vũng Tàu', '800000', 'Male'),
+    (93, 'Lê', 'Thị Hương', '1997-09-25', 'lethihuong@gmail.com', '0123456789', 'Số 930 Nguyễn Văn Linh', 'Quảng Ngãi', 'Quảng Ngãi', '470000', 'Female'),
+    (94, 'Phạm', 'Minh Tuấn', '1998-10-30', 'phamminhtuan@gmail.com', '0987654321', 'Số 940 Lê Duẩn', 'Hà Tĩnh', 'Hà Tĩnh', '480000', 'Male'),
+    (95, 'Hoàng', 'Thị Hằng', '1999-11-10', 'hoangthihang@gmail.com', '0123456789', 'Số 950 Lý Thường Kiệt', 'Cà Mau', 'Cà Mau', '970000', 'Female'),
+    (96, 'Nguyễn', 'Văn Hùng', '2000-12-15', 'nguyenvanhung@gmail.com', '0987654321', 'Số 960 Hùng Vương', 'Hải Dương', 'Hải Dương', '310000', 'Male'),
+    (97, 'Trần', 'Thị Thảo', '2001-01-20', 'tranthithao@gmail.com', '0123456789', 'Số 970 Nguyễn Văn Linh', 'Long Xuyên', 'An Giang', '880000', 'Female'),
+    (98, 'Lê', 'Văn Minh', '2002-02-25', 'levanminh@gmail.com', '0987654321', 'Số 980 Nguyễn Hữu Thọ', 'Quy Nhơn', 'Bình Định', '590000', 'Male'),
+    (99, 'Phạm', 'Thị Mai', '2003-03-30', 'phamthimai@gmail.com', '0123456789', 'Số 990 Lê Lai', 'Huế', 'Thừa Thiên Huế', '540000', 'Female'),
+    (100, 'Hoàng', 'Văn Tùng', '2004-04-05', 'hoangvantung@gmail.com', '0987654321', 'Số 1000 Trần Hưng Đạo', 'Nam Định', 'Nam Định', '420000', 'Male');
 
 
+-- Insert data into student_account table
 INSERT INTO student_account (student_id, username, password, balance, created_date)
 VALUES
     (1, 'user1', 'pass1', 0.00, '2024-06-01'),
@@ -335,69 +336,7 @@ VALUES
     (99, 'user99', 'pass99', 0.00, '2024-06-09'),
     (100, 'user100', 'pass100', 0.00, '2024-06-10');
 
--- Phân lớp và insert vào bảng class_student
-
--- Lớp 1 (C01)
-INSERT INTO class_student (class_id, student_id)
-SELECT 'C01', student_id
-FROM RankedStudents
-WHERE RowNum BETWEEN 1 AND 10;
-
--- Lớp 2 (C02)
-INSERT INTO class_student (class_id, student_id)
-SELECT 'C02', student_id
-FROM RankedStudents
-WHERE RowNum BETWEEN 11 AND 20;
-
--- Lớp 3 (C03)
-INSERT INTO class_student (class_id, student_id)
-SELECT 'C03', student_id
-FROM RankedStudents
-WHERE RowNum BETWEEN 21 AND 30;
-
--- Lớp 4 (C04)
-INSERT INTO class_student (class_id, student_id)
-SELECT 'C04', student_id
-FROM RankedStudents
-WHERE RowNum BETWEEN 31 AND 40;
-
--- Lớp 5 (C05)
-INSERT INTO class_student (class_id, student_id)
-SELECT 'C05', student_id
-FROM RankedStudents
-WHERE RowNum BETWEEN 41 AND 50;
-
--- Lớp 6 (C06)
-INSERT INTO class_student (class_id, student_id)
-SELECT 'C06', student_id
-FROM RankedStudents
-WHERE RowNum BETWEEN 51 AND 60;
-
--- Lớp 7 (C07)
-INSERT INTO class_student (class_id, student_id)
-SELECT 'C07', student_id
-FROM RankedStudents
-WHERE RowNum BETWEEN 61 AND 70;
-
--- Lớp 8 (C08)
-INSERT INTO class_student (class_id, student_id)
-SELECT 'C08', student_id
-FROM RankedStudents
-WHERE RowNum BETWEEN 71 AND 80;
-
--- Lớp 9 (C09)
-INSERT INTO class_student (class_id, student_id)
-SELECT 'C09', student_id
-FROM RankedStudents
-WHERE RowNum BETWEEN 81 AND 90;
-
--- Lớp 10 (C10)
-INSERT INTO class_student (class_id, student_id)
-SELECT 'C10', student_id
-FROM RankedStudents
-WHERE RowNum BETWEEN 91 AND 100;
-
-
+-- Insert data into payment table
 INSERT INTO payment (id, payment_date, amount, status, student_id) VALUES
 (1, '2023-03-01', 5250.00, 'Completed', 5),
 (2, '2023-03-02', 5250.00, 'Completed', 12),

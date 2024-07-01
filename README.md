@@ -4,15 +4,26 @@
 
 EduCenterDB is a comprehensive database management system designed for English learning centers. This project aims to streamline the administration of courses, students, instructors, and classes. The system addresses the need for efficient data management and reporting in educational institutions that focus on language training. 
 
+
 ### Purpose
 
-The primary purpose of EduCenterDB is to facilitate the management of an English learning center's core activities. It provides tools for:
+**Project Objectives:**
+- Design and implement a comprehensive management database for an English language center, supporting the management of student, teacher, course, class, grade, and payment information. The system flexible schedule management, and detailed reports on academic and financial status.
 
-- **Course Management**: Easily create, update, and organize courses.
-- **Student Management**: Manage student registration, personal information, and track their progress.
-- **Instructor Management**: Allocate instructors to courses and manage their schedules.
-- **Class Scheduling**: Schedule and manage classes, ensuring that resources and time slots are used effectively.
-- **Reporting**: Generate reports and statistics to help in decision-making and improve operational efficiency.
+**Project Scope:**
+- **Management Objects:**
+    - **Students:** Personal information, student account, schedule, grades, payments.
+    - **Teachers:** Personal information, teacher account, teaching assignments.
+    - **Courses:** Information about courses, levels, teaching languages, course materials.
+    - **Classes:** Class information, responsible teacher, timetable.
+    - **Payments:** Managing student payments.
+    - **Grades:** Managing student grades across exams.
+    - **Languages, Levels:** Managing teaching language information, course levels.
+    - **Course Materials:** Managing materials related to the courses.
+
+**Users:**
+- **Students:** Register for courses, track schedules, check grades, and manage personal accounts.
+- **Teachers:** Manage teaching schedules, student grades, and teaching materials.
 
 ### Key Features
 
@@ -32,6 +43,40 @@ By adopting EduCenterDB, English learning centers can:
 - **Support Growth**: Flexible system design accommodates the expansion of educational programs and services.
 
 EduCenterDB is an ideal solution for modernizing the data management practices of any English learning center, contributing to better educational outcomes and operational effectiveness.
+
+## Tools and Setup
+
+### Development Tools
+- **Visual Studio Code**: Used as the primary code editor for writing and managing the project's codebase.
+- **SQL Server Management Studio**: Used for managing the SQL Server database, writing and executing SQL queries, and managing database objects.
+
+### Installation and Setup
+
+#### Visual Studio Code
+1. **Download and Install**:
+   - Download Visual Studio Code from the [official website](https://code.visualstudio.com/).
+   - Follow the installation instructions for your operating system.
+2. **Recommended Extensions**:
+   - [SQL Server (mssql)](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql): For connecting and querying SQL Server databases.
+   - [SQL Tools](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools): SQL tools for enhanced SQL development experience.
+   - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) (if applicable): For Python support.
+
+#### SQL Server Management Studio
+1. **Download and Install**:
+   - Download SQL Server Management Studio from the [official website](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
+   - Follow the installation instructions for your operating system.
+2. **Connecting to the Database**:
+   - Launch SQL Server Management Studio.
+   - Enter your server name and authentication details to connect to your SQL Server instance.
+   - Use the Object Explorer to navigate through the database objects.
+
+### Project Setup
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/nminhducit/EduCenterDB.git
+   cd EduCenterDB
+   ```
+
 
 ### Future Plans
 
