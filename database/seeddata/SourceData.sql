@@ -386,7 +386,7 @@ INSERT INTO payment (id, payment_date, amount, status, student_id) VALUES
 (47, '2024-05-16', 5250.0, 'Completed', 21),
 (48, '2024-05-16', 5250.0, 'Completed', 2),
 (49, '2024-05-17', 5250.0, 'Completed', 34),
-(50, '2024-05-17', 5250.0, 'Completed', 43);
+(50, '2024-05-17', 5250.0, 'Completed', 43),
 (51, '2024-05-17', 5250.00, 'Completed', 18),
 (52, '2024-05-18', 5250.00, 'Completed', 29),
 (53, '2024-05-18', 5250.00, 'Completed', 40),
@@ -438,34 +438,116 @@ INSERT INTO payment (id, payment_date, amount, status, student_id) VALUES
 (99, '2024-06-13', 5250.00, 'Completed', 90),
 (100, '2024-06-14', 5250.00, 'Completed', 94);
 
--- Ensure existing data is removed
-DELETE FROM class_student;
 
--- Create a temporary table for random student assignment
-CREATE TABLE #TempAssignments (
-    student_id INT,
-    class_id CHAR(3)
-);
-
--- Insert students into the temporary table with controlled class assignment
-WITH NumberedStudents AS (
-    SELECT ROW_NUMBER() OVER (ORDER BY (SELECT NULL)) AS student_id
-    FROM sys.all_objects -- using sys.all_objects just to get the number of rows needed
-    WHERE type = 'P' -- just to limit the number of rows
-)
-INSERT INTO #TempAssignments (student_id, class_id)
-SELECT student_id,
-       CONCAT('C', RIGHT('0' + CAST((student_id - 1) % 10 + 1 AS VARCHAR), 2)) AS class_id
-FROM NumberedStudents
-WHERE student_id <= 100;
-
--- Insert from temporary table into the target table
-INSERT INTO class_student (class_id, student_id)
-SELECT class_id, student_id
-FROM #TempAssignments;
-
--- Drop temporary table
-DROP TABLE #TempAssignments;
-
--- Optional: Verify the results
-SELECT * FROM class_student;
+-- Insert into class_student table
+-- Insert 10 student to class C01
+INSERT INTO class_student (class_id, student_id) VALUES
+    ('C01', 1),
+    ('C01', 2),
+    ('C01', 3),
+    ('C01', 4),
+    ('C01', 5),
+    ('C01', 6),
+    ('C01', 7),
+    ('C01', 8),
+    ('C01', 9),
+    ('C01', 10),
+-- Insert 10 student to class C02
+    ('C02', 11),
+    ('C02', 12),
+    ('C02', 13),
+    ('C02', 14),
+    ('C02', 15),
+    ('C02', 16),
+    ('C02', 17),
+    ('C02', 18),
+    ('C02', 19),
+    ('C02', 20),
+-- Insert 10 student to class C03
+    ('C03', 21),
+    ('C03', 22),
+    ('C03', 23),
+    ('C03', 24),
+    ('C03', 25),
+    ('C03', 26),
+    ('C03', 27),
+    ('C03', 28),
+    ('C03', 29),
+    ('C03', 30),
+-- Insert 10 student to class C04
+    ('C04', 31),
+    ('C04', 32),
+    ('C04', 33),
+    ('C04', 34),
+    ('C04', 35),
+    ('C04', 36),
+    ('C04', 37),
+    ('C04', 38),
+    ('C04', 39),
+    ('C04', 40),
+-- Insert 10 student to class C05
+    ('C05', 41),
+    ('C05', 42),
+    ('C05', 43),
+    ('C05', 44),
+    ('C05', 45),
+    ('C05', 46),
+    ('C05', 47),
+    ('C05', 48),
+    ('C05', 49),
+    ('C05', 50),
+-- Insert 10 student to class C06
+    ('C06', 51),
+    ('C06', 52),
+    ('C06', 53),
+    ('C06', 54),
+    ('C06', 55),
+    ('C06', 56),
+    ('C06', 57),
+    ('C06', 58),
+    ('C06', 59),
+    ('C06', 60),
+-- Insert 10 student to class C07
+    ('C07', 61),
+    ('C07', 62),
+    ('C07', 63),
+    ('C07', 64),
+    ('C07', 65),
+    ('C07', 66),
+    ('C07', 67),
+    ('C07', 68),
+    ('C07', 69),
+    ('C07', 70),
+-- Insert 10 student to class C08
+    ('C08', 71),
+    ('C08', 72),
+    ('C08', 73),
+    ('C08', 74),
+    ('C08', 75),
+    ('C08', 76),
+    ('C08', 77),
+    ('C08', 78),
+    ('C08', 79),
+    ('C08', 80),
+-- Insert 10 student to class C09
+    ('C09', 81),
+    ('C09', 82),
+    ('C09', 83),
+    ('C09', 84),
+    ('C09', 85),
+    ('C09', 86),
+    ('C09', 87),
+    ('C09', 88),
+    ('C09', 89),
+    ('C09', 90),
+-- Insert 10 student to class C10
+    ('C10', 91),
+    ('C10', 92),
+    ('C10', 93),
+    ('C10', 94),
+    ('C10', 95),
+    ('C10', 96),
+    ('C10', 97),
+    ('C10', 98),
+    ('C10', 99),
+    ('C10', 100);
