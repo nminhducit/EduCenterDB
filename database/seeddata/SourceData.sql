@@ -617,3 +617,23 @@ INSERT INTO class_student (class_id, student_id) VALUES
     ('C10', 98),
     ('C10', 99),
     ('C10', 100);
+
+-- Insert grades with specific assignments
+INSERT INTO grade (id, value, student_id, exam_id) 
+SELECT
+    ROW_NUMBER() OVER (ORDER BY student_id, exam_id) AS id,
+    FLOOR(RAND(CHECKSUM(NEWID())) * 101) AS value,  -- Random grades from 0 to 100
+    student_id,
+    exam_id
+FROM
+(
+    SELECT student_id, exam_id
+    FROM 
+    (
+        SELECT s.id AS student_id, e.id AS exam_id, c.id AS class_id
+        FROM student s
+        CROSS JOIN exam e
+        JOIN class_student cs ON s.id = cs.student_id
+        JOIN class c ON cs.class_id = c.id AND e.class_id = c.id
+    ) AS temp
+) AS results;
