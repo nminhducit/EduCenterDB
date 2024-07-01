@@ -24,6 +24,58 @@ VALUES
 ('S002', 'Speaking', 2),
 ('S003', 'Speaking', 3);
 
+-- Insert data into course_material with detailed descriptions
+INSERT INTO course_material (id, course_id, description, material_type, material_url, date_add) VALUES
+-- Writing Level 1
+(1, 'W001', 'The Essential Guide to Writing: Exercises for Beginners', 'Exercises', 'http://educenterdb.com/writing/essential-guide-exercises-beginners', '2024-01-01'),
+(2, 'W001', 'Fundamentals of Writing: Comprehensive Textbook for Level 1', 'Textbook', 'http://educenterdb.com/writing/fundamentals-textbook-level1', '2024-01-01'),
+(3, 'W001', 'Mastering Grammar and Style: A Reference for Novice Writers', 'Reference', 'http://educenterdb.com/writing/mastering-grammar-style-reference', '2024-01-01'),
+-- Writing Level 2
+(4, 'W002', 'Advanced Writing Techniques: Exercises for Intermediate Learners', 'Exercises', 'http://educenterdb.com/writing/advanced-techniques-exercises-intermediate', '2024-01-02'),
+(5, 'W002', 'Writing with Precision: A Detailed Textbook for Level 2', 'Textbook', 'http://educenterdb.com/writing/precision-textbook-level2', '2024-01-02'),
+(6, 'W002', 'Crafting Effective Arguments: A Reference for Intermediate Writers', 'Reference', 'http://educenterdb.com/writing/effective-arguments-reference', '2024-01-02'),
+-- Writing Level 3
+(7, 'W003', 'Mastery in Writing: Challenging Exercises for Advanced Students', 'Exercises', 'http://educenterdb.com/writing/mastery-exercises-advanced', '2024-01-03'),
+(8, 'W003', 'The Writer’s Handbook: Comprehensive Textbook for Level 3', 'Textbook', 'http://educenterdb.com/writing/handbook-textbook-level3', '2024-01-03'),
+(9, 'W003', 'Writing Across Genres: An Advanced Reference Guide', 'Reference', 'http://educenterdb.com/writing/genres-reference-guide', '2024-01-03'),
+-- Reading Level 1
+(10, 'R001', 'Reading Fundamentals: Exercises to Improve Basic Skills', 'Exercises', 'http://educenterdb.com/reading/fundamentals-exercises-basic', '2024-01-04'),
+(11, 'R001', 'Introduction to Reading: Foundational Textbook for Beginners', 'Textbook', 'http://educenterdb.com/reading/introduction-textbook-beginners', '2024-01-04'),
+(12, 'R001', 'Understanding Narratives: A Beginner’s Reference Book', 'Reference', 'http://educenterdb.com/reading/understanding-narratives-reference', '2024-01-04'),
+-- Reading Level 2
+(13, 'R002', 'Intermediate Reading Practice: Exercises for Skill Enhancement', 'Exercises', 'http://educenterdb.com/reading/intermediate-practice-exercises', '2024-01-05'),
+(14, 'R002', 'Exploring Literature: An Intermediate Textbook for Readers', 'Textbook', 'http://educenterdb.com/reading/exploring-literature-textbook', '2024-01-05'),
+(15, 'R002', 'Critical Reading Skills: A Reference for Intermediate Learners', 'Reference', 'http://educenterdb.com/reading/critical-skills-reference', '2024-01-05'),
+-- Reading Level 3
+(16, 'R003', 'Advanced Reading Comprehension: Exercises for Proficient Readers', 'Exercises', 'http://educenterdb.com/reading/advanced-comprehension-exercises', '2024-01-06'),
+(17, 'R003', 'Analyzing Texts: A Comprehensive Textbook for Advanced Readers', 'Textbook', 'http://educenterdb.com/reading/analyzing-texts-textbook', '2024-01-06'),
+(18, 'R003', 'Interpreting Complex Narratives: An Advanced Reference Guide', 'Reference', 'http://educenterdb.com/reading/complex-narratives-reference', '2024-01-06'),
+-- Listening Level 1
+(19, 'L001', 'Listening Skills Development: Basic Exercises for Beginners', 'Exercises', 'http://educenterdb.com/listening/skills-development-exercises', '2024-01-07'),
+(20, 'L001', 'Listening Essentials: A Textbook for Foundational Learning', 'Textbook', 'http://educenterdb.com/listening/essentials-textbook', '2024-01-07'),
+(21, 'L001', 'Effective Listening Strategies: A Reference for Beginners', 'Reference', 'http://educenterdb.com/listening/effective-strategies-reference', '2024-01-07'),
+-- Listening Level 2
+(22, 'L002', 'Enhancing Listening Skills: Exercises for Intermediate Students', 'Exercises', 'http://educenterdb.com/listening/enhancing-skills-exercises', '2024-01-08'),
+(23, 'L002', 'Listening in Context: An Intermediate Textbook for Skill Building', 'Textbook', 'http://educenterdb.com/listening/in-context-textbook', '2024-01-08'),
+(24, 'L002', 'Advanced Listening Techniques: A Reference for Intermediate Learners', 'Reference', 'http://educenterdb.com/listening/advanced-techniques-reference', '2024-01-08'),
+-- Listening Level 3
+(25, 'L003', 'Proficient Listening Practice: Advanced Exercises for High-level Learners', 'Exercises', 'http://educenterdb.com/listening/proficient-practice-exercises', '2024-01-09'),
+(26, 'L003', 'Mastering Listening Skills: Comprehensive Textbook for Advanced Students', 'Textbook', 'http://educenterdb.com/listening/mastering-skills-textbook', '2024-01-09'),
+(27, 'L003', 'Strategies for Complex Auditory Processing: An Advanced Reference Guide', 'Reference', 'http://educenterdb.com/listening/complex-processing-reference', '2024-01-09'),
+-- Speaking Level 1
+(28, 'S001', 'Basic Speaking Skills: Exercises for Novice Speakers', 'Exercises', 'http://educenterdb.com/speaking/basic-skills-exercises', '2024-01-10'),
+(29, 'S001', 'Introduction to Speaking: A Textbook for Beginners', 'Textbook', 'http://educenterdb.com/speaking/introduction-textbook', '2024-01-10'),
+(30, 'S001', 'Effective Speaking Strategies: A Reference for New Learners', 'Reference', 'http://educenterdb.com/speaking/effective-strategies-reference', '2024-01-10'),
+-- Speaking Level 2
+(31, 'S002', 'Intermediate Speaking Practice: Skill-building Exercises', 'Exercises', 'http://educenterdb.com/speaking/intermediate-practice-exercises', '2024-01-11'),
+(32, 'S002', 'Communicative Speaking: An Intermediate Textbook', 'Textbook', 'http://educenterdb.com/speaking/communicative-textbook', '2024-01-11'),
+(33, 'S002', 'Advanced Communication Techniques: A Reference for Intermediate Speakers', 'Reference', 'http://educenterdb.com/speaking/communication-techniques-reference', '2024-01-11'),
+-- Speaking Level 3
+(34, 'S003', 'Fluency in Speaking: Advanced Exercises for Proficient Communicators', 'Exercises', 'http://educenterdb.com/speaking/fluency-exercises', '2024-01-12'),
+(35, 'S003', 'Mastering Public Speaking: A Comprehensive Textbook for Advanced Levels', 'Textbook', 'http://educenterdb.com/speaking/public-speaking-textbook', '2024-01-12'),
+(36, 'S003', 'Oratory Excellence: An Advanced Reference for Skilled Speakers', 'Reference', 'http://educenterdb.com/speaking/oratory-excellence-reference', '2024-01-12');
+
+
 INSERT INTO teacher (id, first_name, last_name, description, date_birth, gender, email, phone, street, city, state, zip)
 VALUES
 (1, 'John', 'Doe', 'English Language Teacher', '1979-05-10', 'Male', 'john.doe@gmail.com', '0905123456', '123 Nguyen Du', 'Hanoi', 'HN', '100000'),
