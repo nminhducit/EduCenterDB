@@ -37,6 +37,20 @@ VALUES
 (9, 'Le', 'Thi Lan', 'English Language Teacher', '1995-05-11', 'Female', 'lan.le@gmail.com', '0905901234', '369 Le Hong Phong', 'Quy Nhon', 'QN', '820000'),
 (10, 'Pham', 'Van Kien', 'English Language Teacher', '1990-10-30', 'Male', 'kien.pham@gmail.com', '0906012345', '147 Tran Hung Dao', 'Bien Hoa', 'BH', '810000');
 
+-- Insert data into teacher_account table
+INSERT INTO teacher_account (teacher_id, username, password, is_active)
+VALUES
+(1, 'johndoe', 'password123', 1),
+(2, 'janesmith', 'password123', 1),
+(3, 'paultaylor', 'password123', 1),
+(4, 'emilyjohnson', 'password123', 1),
+(5, 'michaelbrown', 'password123', 1),
+(6, 'sarawilson', 'password123', 1),
+(7, 'hoanguyen', 'password123', 1),
+(8, 'namtran', 'password123', 1),
+(9, 'lanle', 'password123', 1),
+(10, 'kienpham', 'password123', 1);
+
 -- Insert data into class table
 INSERT INTO class (id, start_date, end_date, teacher_id, course_id) VALUES
 ('C01', '2024-07-01', '2024-12-01', 1, 'W001'),
