@@ -1,16 +1,13 @@
-﻿USE EduCenterDB;
-
+﻿
 --Truy vấn tài khoản giáo viên với trạng thái hoạt động cụ thể
 SELECT * FROM teacher_account
 WHERE is_active = 1;
-
 --Truy vấn tài khoản giáo viên được tạo trong một khoảng thời gian cụ thể
 SELECT * FROM teacher_account
 WHERE teacher_id IN (
     SELECT id FROM teacher
     WHERE date_birth BETWEEN '1980-01-01' AND '1990-12-31'
 );
-
 -- Truy vấn thông tin giáo viên theo thành phố hoặc số điện thoại
 SELECT * FROM teacher
 WHERE city = 'Hanoi' OR phone = '0905123456';
@@ -27,6 +24,8 @@ SELECT city, COUNT(id) AS student_count FROM student GROUP BY city;
 SELECT * FROM student_account WHERE balance > 5000;
 -- Truy vấn tài khoản học sinh được tạo trong một khoảng thời gian cụ thể
 SELECT * FROM student_account WHERE created_date BETWEEN '2024-01-01' AND '2024-12-31';
+-- Truy vấn tài khoản học sinh được tạo từ ngày 7-6-2024 trở đi
+SELECT * FROM student_account sa JOIN student s ON sa.student_id = s.id WHERE sa.created_date >= '2024-06-07'
 
 -- class_student
 -- Truy vấn số lượng học sinh trong từng lớp
@@ -68,6 +67,6 @@ SELECT l.name AS level_name, COUNT(c.id) AS course_count FROM course c JOIN leve
 
 -- course_material
 -- Lấy tài liệu theo loại tài liệu
-SELECT * FROM course_material WHERE material_type = N'PDF';
+SELECT * FROM course_material WHERE material_type = N'Reference';
 -- Lấy tài liệu được thêm vào trong khoảng thời gian
 SELECT * FROM course_material WHERE date_add BETWEEN '2024-01-01' AND '2024-12-31';
