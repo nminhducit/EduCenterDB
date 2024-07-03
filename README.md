@@ -77,7 +77,6 @@ EduCenterDB is an ideal solution for modernizing the data management practices o
    cd EduCenterDB
    ```
 
-
 ### Future Plans
 
 We plan to continuously enhance EduCenterDB by incorporating advanced features such as:
@@ -87,3 +86,9 @@ We plan to continuously enhance EduCenterDB by incorporating advanced features s
 - **AI Recommendations**: Implement AI-driven recommendations for course selection and personalized learning paths.
 
 Feel free to explore our project and contribute to its development. For any questions or suggestions, please contact us via our [issue tracker](https://github.com/nminhducit/EduCenterDB/issues) or email us at nminhducit@gmail.com.
+
+## Contributors
+
+| [![Nguyen Minh Duc](https://avatars.githubusercontent.com/u/95899532?s=100)](https://github.com/nminhducit) |
+|:----------------------------------------------------------------------------------:|
+|                      [Nguyen Minh Duc](https://github.com/nminhducit)                      |
