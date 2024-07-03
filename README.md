@@ -90,5 +90,5 @@ Feel free to explore our project and contribute to its development. For any ques
 ## Contributors
 This project exists thanks to all the people who contribute.
 
-<a href="graphs/contributors"><img src="https://contrib.rocks/image?repo=vasu-1/CalcHub" /></a>
+<a href="graphs/contributors"><img src="https://contrib.rocks/image?repo=nminhducit/EduCenterDB" /></a>
 
