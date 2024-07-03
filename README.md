@@ -88,19 +88,7 @@ We plan to continuously enhance EduCenterDB by incorporating advanced features s
 Feel free to explore our project and contribute to its development. For any questions or suggestions, please contact us via our [issue tracker](https://github.com/nminhducit/EduCenterDB/issues) or email us at nminhducit@gmail.com.
 
 ## Contributors
+This project exists thanks to all the people who contribute.
 
-| [![Nguyen Minh Duc](https://avatars.githubusercontent.com/u/95899532?s=100)](https://github.com/nminhducit) |
-|:----------------------------------------------------------------------------------:|
-|                      [Nguyen Minh Duc](https://github.com/nminhducit)                      |
+<a href="graphs/contributors"><img src="https://contrib.rocks/image?repo=vasu-1/CalcHub" /></a>
 
-| [![David Nguyen](https://avatars.githubusercontent.com/u/79192823?size=100)](https://github.com/davidnguyen26) |
-|:----------------------------------------------------------------------------------:|
-|                      [David Nguyen](https://github.com/davidnguyen26)                      |
-
-| [![Nguyen Hoang Son](https://avatars.githubusercontent.com/u/171227772?size=100)](https://github.com/susu1707) |
-|:----------------------------------------------------------------------------------:|
-|                      [Nguyen Hoang Son](https://github.com/susu1707)                      |
-
-| [![Quach Hai Bang](https://avatars.githubusercontent.com/u/158814377?size=100)](https://github.com/Haibang2k4) |
-|:----------------------------------------------------------------------------------:|
-|                      [Quach Hai Bang](https://github.com/Haibang2k4)                      |
