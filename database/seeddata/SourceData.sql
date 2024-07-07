@@ -1,5 +1,5 @@
 ﻿
-INSERT INTO level (id, name)
+INSERT INTO level(id, name)
 VALUES
 (1, '0-450'),
 (2, '450-600'),
