@@ -3,15 +3,15 @@
 	SELECT
 		g.id AS grade_id,
 		s.id AS student_id,
-		s.name AS student_name,
+		CONCAT(s.first_name, ' ', s.last_name) AS student_name,
 		e.id AS exam_id,
-		e.name AS exam_name,
+		e.description AS exam_description, -- Dùng description thay vì name
 		g.value AS grade_value
 	FROM grade g
 	JOIN student s ON g.student_id = s.id
 	JOIN exam e ON g.exam_id = e.id;
 	GO
-
+	   
 --Browse the payment list and print out completed payments (D)
 	CREATE VIEW CompletedPayments AS
 	SELECT
@@ -22,6 +22,9 @@
 		student_id
 	FROM payment
 	WHERE status = 'Completed';
+	GO
+
+--Browse Student List and Print Out Students Who Don't Have Emails (V)
 	-- Declare variables for Cursor
 	DECLARE @student_id INT;
 	DECLARE @student_name NVARCHAR(100);
@@ -34,9 +37,6 @@
 		email
 	FROM student
 	WHERE email IS NULL; 
-	GO
-
---Browse through the student list and print out students who do not have an email. (V)
 	-- Open Cursor
 	OPEN student_cursor;
 	-- Loop through each line of data
@@ -110,10 +110,10 @@
 	-- Add new class schedule
 	INSERT INTO class_weekday (class_id, weekday_id)
 		VALUES (@class_id, @weekday_id);
-
 		PRINT 'The class schedule has been successfully added.';
 	END;
 	GO
+	--Call stored procedure
 	EXEC AddClassSchedule @class_id = 'C01', @weekday_id = 'Tue';  
 	GO
 
@@ -152,14 +152,17 @@
 		DECLARE @new_phone VARCHAR(15);
 		DECLARE @old_email VARCHAR(100);
 		DECLARE @old_phone VARCHAR(15);
-		-- Get the new and old values ​​from the teacher table
-		SELECT @teacher_id = INSERTED.id,
-			   @new_email = INSERTED.email,
-			   @new_phone = INSERTED.phone,
-			   @old_email = DELETED.email,
-			   @old_phone = DELETED.phone
+    
+		-- Lấy giá trị mới và cũ từ bảng teacher
+		SELECT 
+			@teacher_id = INSERTED.id,
+			@new_email = INSERTED.email,
+			@new_phone = INSERTED.phone,
+			@old_email = DELETED.email,
+			@old_phone = DELETED.phone
 		FROM INSERTED
 		JOIN DELETED ON INSERTED.id = DELETED.id;
+
 		IF (@new_email != @old_email OR @new_phone != @old_phone)
 		BEGIN
 			UPDATE teacher_account
@@ -167,9 +170,11 @@
 			WHERE teacher_id = @teacher_id;
 		END
 	END;
+	GO
 
 --Create index for description to speed up search. (S)
 	CREATE INDEX testcourse   ON dbo.course(description)
+	GO
 
 --Create a trigger to update the last change time of the course when there is an update. (S)
 	ALTER TABLE course
