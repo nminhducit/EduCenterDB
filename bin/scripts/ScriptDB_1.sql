@@ -40,6 +40,7 @@
 	-- Open Cursor
 	OPEN student_cursor;
 	-- Loop through each line of data
+	
 		FETCH NEXT FROM student_cursor INTO @student_id, @student_name, @student_email;
 	WHILE @@FETCH_STATUS = 0
 	BEGIN
