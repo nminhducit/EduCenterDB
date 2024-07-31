@@ -30,7 +30,7 @@ INSERT INTO course_material (id, course_id, description, material_type, material
 (1, 'W001', 'The Essential Guide to Writing: Exercises for Beginners', 'Exercises', 'http://educenterdb.com/writing/essential-guide-exercises-beginners', '2024-01-01'),
 (2, 'W001', 'Fundamentals of Writing: Comprehensive Textbook for Level 1', 'Textbook', 'http://educenterdb.com/writing/fundamentals-textbook-level1', '2024-01-01'),
 (3, 'W001', 'Mastering Grammar and Style: A Reference for Novice Writers', 'Reference', 'http://educenterdb.com/writing/mastering-grammar-style-reference', '2024-01-01'),
--- Writing Level 2
+-- Writing Level 2 
 (4, 'W002', 'Advanced Writing Techniques: Exercises for Intermediate Learners', 'Exercises', 'http://educenterdb.com/writing/advanced-techniques-exercises-intermediate', '2024-01-02'),
 (5, 'W002', 'Writing with Precision: A Detailed Textbook for Level 2', 'Textbook', 'http://educenterdb.com/writing/precision-textbook-level2', '2024-01-02'),
 (6, 'W002', 'Crafting Effective Arguments: A Reference for Intermediate Writers', 'Reference', 'http://educenterdb.com/writing/effective-arguments-reference', '2024-01-02'),
